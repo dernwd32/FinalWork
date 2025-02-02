@@ -1,0 +1,5 @@
+2025-02-02 02:39:07 INFO  First_Test      - [firefox]  -> курсов на странице = 10                                                                                         > PASS
+2025-02-02 05:18:51 INFO  First_Test      - [chrome]   -> курсов на странице = 10                                                                                         > PASS
+2025-02-02 05:23:04 INFO  First_Test      - [chrome]   -> курсов на странице = 10                                                                                         > PASS
+2025-02-02 15:41:16 INFO  First_Test      - [chrome]   -> курсов на странице = 10                                                                                         > PASS
+2025-02-02 15:44:28 INFO  First_Test      - [chrome]   -> курсов на странице = 10                                                                                         > PASS
