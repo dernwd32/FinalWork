@@ -3,6 +3,8 @@ package webdriver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
@@ -34,6 +36,11 @@ public class WebDriverFactory implements IWebDriver{
                 ChromeOptions options = new ChromeOptions();
                 if (argsWasSet) options.addArguments(mode);
                 driver = new ChromeDriver(options);
+            }
+            case "edge" -> {
+                EdgeOptions options = new EdgeOptions();
+                if (argsWasSet) options.addArguments(mode);
+                driver = new EdgeDriver(options);
             }
             default -> {
                throw new RuntimeException(String.format("Browser <%s> is not supported by the factory", webDriverName));

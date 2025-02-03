@@ -108,7 +108,7 @@
                 <configuration>
                     <systemPropertyVariables>
                         <base.url>https://otus.ru</base.url>
-                        <waiter.timeout>2000</waiter.timeout>
+                        <waiter.timeout>5000</waiter.timeout>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>

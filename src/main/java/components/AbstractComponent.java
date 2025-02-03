@@ -20,10 +20,8 @@ public abstract class AbstractComponent {
     }
 
     public WebElement getRootElement() {
-        if( standartWaiter.waitForElementVisible(driver.findElement(rootLocator)) ) {
+            standartWaiter.waitForElementLocatedAndVisible(rootLocator);
             return driver.findElement(rootLocator);
-        }
-        return null;
     }
 
     public Object getMetaValues(String metaName) {
@@ -39,5 +37,6 @@ public abstract class AbstractComponent {
         }
         return "";
     }
+
 
 }

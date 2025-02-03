@@ -3,6 +3,7 @@ package components;
 import annotations.ComponentBlueprint;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 @ComponentBlueprint( rootLocator = "//p[contains(text(),'Направление')]/following::div[@class='ReactCollapse--content'][1]" )
 public class CoursesTypesMenuComponent extends AbstractComponent{
@@ -15,13 +16,13 @@ public class CoursesTypesMenuComponent extends AbstractComponent{
     private final By spanHideXPath =
             By.xpath(".//span[contains(text(),'Свернуть')]");
 
-
-    public void chooseCoursesType() {
-        getRootElement().findElement(labelTestingXPath).click();
+    public WebElement getLabelTesting() {
+        return getRootElement().findElement(labelTestingXPath);
     }
 
-    public void clickHideMoreTypes(){
-        getRootElement().findElement(spanHideXPath).click();
+    public WebElement getSpanHide() {
+        return getRootElement().findElement(spanHideXPath);
     }
+
 
 }

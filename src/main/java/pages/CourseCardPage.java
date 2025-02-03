@@ -12,7 +12,7 @@ public class CourseCardPage extends AbstractPage{
 
     @Override
     public void openPage() { //сюда параметр конкретной карточки докинуть?
-        driver.get(pageUrl);
+       // driver.get(pageUrl);
     }
 
 
