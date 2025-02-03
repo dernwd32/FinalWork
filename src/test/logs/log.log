@@ -470,3 +470,12 @@
 2025-02-03 20:17:32 INFO  Courses_Test    - [chrome]   -> https://otus.ru/lessons/loadqa описание                                                                         > PASS
 2025-02-03 20:17:32 INFO  Courses_Test    - [chrome]   -> https://otus.ru/lessons/loadqa длительность                                                                     > PASS
 2025-02-03 20:17:32 INFO  Courses_Test    - [chrome]   -> https://otus.ru/lessons/loadqa формат                                                                           > PASS
+2025-02-04 00:49:52 ERROR Events_Test     - [firefox]  -> testEvents                                                                                                      > FAIL
+2025-02-04 00:51:20 ERROR Events_Test     - [firefox]  -> testEvents                                                                                                      > FAIL
+2025-02-04 00:52:28 INFO  Events_Test     - [firefox]  -> testEvents                                                                                                      > PASS
+2025-02-04 00:59:34 INFO  Events_Test     - [firefox]  -> мероприятий в разделе: 106                                                                                      > PASS
+2025-02-04 00:59:35 INFO  Events_Test     - [firefox]  -> все даты мероприятий в будущем                                                                                  > PASS
+2025-02-04 02:38:39 INFO  Events_Test     - [firefox]  -> заголовки карточек соответствуют фильтру                                                                        > PASS
+2025-02-04 02:42:45 ERROR Events_Test     - [firefox]  -> заголовки карточек соответствуют фильтру                                                                        > FAIL
+2025-02-04 02:46:08 INFO  Events_Test     - [MicrosoftEdge]-> заголовки карточек соответствуют фильтру                                                                    > PASS
+2025-02-04 02:48:34 INFO  Events_Test     - [MicrosoftEdge]   -> заголовки карточек соответствуют фильтру                                                                 > PASS

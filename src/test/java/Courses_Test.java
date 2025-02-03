@@ -36,7 +36,7 @@ public class Courses_Test {
     }
 
     @Test
-    @DisplayName("Проверка фильтров и списка карточек курсов")
+    @DisplayName("Проверка количества курсов в разделе «Тестирование»")
     public void testCoursesList() {
 
 

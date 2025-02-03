@@ -12,32 +12,47 @@ import pages.EventsPage;
 import waiters.StandartWaiter;
 import webdriver.WebDriverFactory;
 
+import java.time.LocalDate;
+
 public class Events_Test {
 
     private static final Logger logger = LogManager.getLogger(Events_Test.class);
     WebDriver driver;
     WebDriverFactory webDriverFactory = new WebDriverFactory();
-    //AssertWithLog assertWithLog = null;
+    AssertWithLog assertWithLog = null;
     EventsPage eventsPage = null;
 
     @BeforeEach
     void beforeEach() {
         String webDriverName = System.getProperty("browser", "edge").toLowerCase();
         driver = webDriverFactory.create(webDriverName, "maximize");
-       // assertWithLog = new AssertWithLog(driver, logger);
+        assertWithLog = new AssertWithLog(driver, logger);
 
         eventsPage = new EventsPage(driver);
         eventsPage.openPage();
     }
 
     @Test
-    @DisplayName("Проверка мероприятий")
+    @DisplayName("Валидация дат предстоящих мероприятий")
     public void testEvents() {
         eventsPage.scrollToShowFullEventsList();
+        assertWithLog.assertWithLog(eventsPage.countEvents()>=1, "мероприятий в разделе: " + eventsPage.countEvents() );
+        assertWithLog.assertWithLog(eventsPage.checkEventDates(), "все даты мероприятий в будущем");
     }
+
+
+    @Test
+    @DisplayName("Просмотр мероприятий по типу:")
+    public void testEventsTypes() {
+        eventsPage.chooseEventFilter("Открытый вебинар");
+        eventsPage.scrollToShowFullEventsList();
+        assertWithLog.assertWithLog(eventsPage.checkTitlesOfEventCards("Открытый вебинар"), "заголовки карточек соответствуют фильтру");
+    }
+
+
     @AfterEach
     void tearDown() {
-       if (driver != null) driver.close();
+        if (driver != null) driver.close();
     }
 
 }

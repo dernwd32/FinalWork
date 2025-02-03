@@ -55,7 +55,7 @@ public class AssertWithLog {
     public void assertWithLog(boolean condition, String message, Logger logger, String currentBrowser) {
         SoftAssertions softly = new SoftAssertions();
         message = String.format("%-125s",
-                        String.format("%-11s", "[" + currentBrowser + "]")
+                        String.format("%-18s", "[" + currentBrowser + "]")
                         + "-> "
                         + message
                   );
