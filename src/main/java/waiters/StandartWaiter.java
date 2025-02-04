@@ -43,7 +43,7 @@ public class StandartWaiter implements WaiterInt {
   }
 
   public boolean waitForElementLocatedAndVisible(By locator) {
-    return waitForCondition(ExpectedConditions.visibilityOfElementLocated(locator), 3000);
+    return waitForCondition(ExpectedConditions.visibilityOfElementLocated(locator), 10000);
   }
 
   public boolean waitForElementNotVisible(WebElement element) {

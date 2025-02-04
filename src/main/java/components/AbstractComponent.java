@@ -19,10 +19,16 @@ public abstract class AbstractComponent {
         standartWaiter = new StandartWaiter(driver);
     }
 
+//    public WebElement waitAndReturnWebElement(By locator){
+//        standartWaiter.waitForElementLocatedAndVisible(locator);
+//        return driver.findElement(locator);
+//    }
+
     public WebElement getRootElement() {
-            standartWaiter.waitForElementLocatedAndVisible(rootLocator);
-            return driver.findElement(rootLocator);
+        standartWaiter.waitForElementLocatedAndVisible(rootLocator);
+        return driver.findElement(rootLocator);
     }
+
 
     public Object getMetaValues(String metaName) {
         Class clazz = this.getClass();

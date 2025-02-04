@@ -3,11 +3,16 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.assertj.core.api.SoftAssertions;
 import org.junit.jupiter.api.*;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import pages.CourseCardPage;
 import pages.CoursesRootPage;
 import waiters.StandartWaiter;
 import webdriver.WebDriverFactory;
+
+import static org.junit.jupiter.api.Assertions.assertAll;
+
 
 public class Courses_Test {
 
@@ -22,7 +27,7 @@ public class Courses_Test {
 
     @BeforeEach
     void beforeEach() {
-        String webDriverName = System.getProperty("browser", "chrome").toLowerCase();
+        String webDriverName = System.getProperty("browser", "edge").toLowerCase();
         driver = webDriverFactory.create(webDriverName, "maximize");
         assertWithLog = new AssertWithLog(driver, logger);
         standartWaiter = new StandartWaiter(driver);
@@ -46,7 +51,7 @@ public class Courses_Test {
     }
 
     @Test
-    @DisplayName("Проверка содержимого карточек курсов")
+    @DisplayName("Проверка содержимого карточек курсов (по ссылкам)")
     public void testCoursesCard() {
         courseCardPage = new CourseCardPage(driver);
 
@@ -58,13 +63,9 @@ public class Courses_Test {
         ...можно сделать ещё один класс для старой страницы, и применить тут ооп как раз (с) Картушин
         */
         coursesRootPage.hrefsOfCardsInList().forEach(
-       // coursesRootPage.cardsInList().forEach(
                 thisCard -> {
                     if (!thisCard.equals("https://otus.ru/online/manualtesting")) { //заглушка для старой страницы
                         driver.get(thisCard);
-                        //courseCardPage.killFilthyPopups(); //тут не мешают
-                        // thisCard.click();
-
                         assertWithLog.assertWithLog(
                                 courseCardPage.getCourseCardHeaderComponent().isntEmpty(
                                         courseCardPage
@@ -94,21 +95,35 @@ public class Courses_Test {
                                 thisCard + " формат"
                         );
 
-//                    coursesRootPage.openPage();
-//                    coursesRootPage.chooseCoursesType();
-//                    coursesRootPage.getCoursesCardsListComponent().getSearchLoader();
                     }
                 }
         );
         // softly.assertAll();
+    }
+
+
+    @Test
+    @DisplayName("Проверка содержимого карточек курсов (прокликивая)")
+    public void testCoursesCard2() {
+
+        coursesRootPage = new CoursesRootPage(driver);
+        //coursesRootPage.getCoursesCardsListComponent().clickShowMoreWhileUCan();
+
+        coursesRootPage.openLinksInNewTabAndCollectTexts().forEach((checkTitle, checkContent) -> {
+            assertWithLog.assertWithLog(
+                    checkContent.length()>1,
+                    checkTitle
+            );
+        });
+
+
 
 
 
     }
 
-
     @AfterEach
     void tearDown() {
-        if (driver != null) driver.close();
+        if (driver != null) driver.quit();
     }
 }

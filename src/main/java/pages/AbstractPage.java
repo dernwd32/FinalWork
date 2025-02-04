@@ -54,7 +54,7 @@ public abstract class AbstractPage {
                //element.click();
                 //System.out.println(element);
                // jsExecutor.executeScript("arguments[0].scrollIntoView();", element);
-                System.out.println(element);
+                //System.out.println(element);
                 jsExecutor.executeScript("arguments[0].click();", element);
                // builder.moveToElement(element).click().perform();
             }

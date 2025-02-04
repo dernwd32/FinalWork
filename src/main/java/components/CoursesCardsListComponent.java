@@ -16,12 +16,12 @@ public class CoursesCardsListComponent extends AbstractComponent{
     }
 
 
-//div[contains(text(),'Каталог')]/following::a[starts-with(@href, '/less')]
     private final By cardsInListXPath = By.xpath(".//a");
     private final By showMoreBtnXPath = By.xpath(".//button[contains(text(),'Показать')]");
     private final By searchLoader = By.xpath(".//label[contains(text(),'Поиск')]//following::div[1]//div");
     //div[contains(text(),'Каталог')]/ancestor::section//label[contains(text(),'Поиск')]//following::div[1]//div
     //label[contains(text(),'Поиск')]//following::*[local-name()='circle' and @cx='11.767']
+    //div[contains(text(),'Каталог')]/following::a[starts-with(@href, '/less')]
 
 
 
@@ -30,7 +30,6 @@ public class CoursesCardsListComponent extends AbstractComponent{
         return getRootElement().findElements(cardsInListXPath);
     }
     public boolean getSearchLoader() {
-        //return getRootElement().findElement(searchLoader);
         return standartWaiter.waitForElementNotVisible(
                 getRootElement().findElement(searchLoader)
         );
@@ -43,11 +42,6 @@ public class CoursesCardsListComponent extends AbstractComponent{
     }
 
     public void clickShowMoreWhileUCan(){
-
-//        WebElement showBtn = getRootElement().findElement(showMoreBtnXPath);
-//        builder.moveToElement(showBtn).click().perform();
-//        WebElement showBtn = driver.findElement(showMoreBtnXPath);
-//        //jsExecutor.executeScript("arguments[0].scrollIntoView();", showBtn);
         while (standartWaiter.waitToBeClickable(getShowMoreBtn())) {
             getShowMoreBtn().click();
         }
