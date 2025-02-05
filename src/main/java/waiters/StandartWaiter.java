@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.Arrays;
 import java.util.regex.Pattern;
 
 public class StandartWaiter implements WaiterInt {
@@ -41,9 +42,14 @@ public class StandartWaiter implements WaiterInt {
   public boolean waitForElementVisible(WebElement element) {
     return waitForCondition(ExpectedConditions.visibilityOf(element));
   }
-
-  public boolean waitForElementLocatedAndVisible(By locator) {
-    return waitForCondition(ExpectedConditions.visibilityOfElementLocated(locator), 10000);
+  public boolean waitForElementLocatedAndVisible(By... locators) {
+      for (By locator : locators) {
+          if (!waitForCondition(ExpectedConditions.visibilityOfElementLocated(locator), 20000)) {
+            System.out.println("Не найден локатор: " + locator.toString());
+            return false;
+          }
+      }
+      return true;
   }
 
   public boolean waitForElementNotVisible(WebElement element) {

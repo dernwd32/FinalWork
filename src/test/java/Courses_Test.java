@@ -23,11 +23,11 @@ public class Courses_Test {
     CoursesRootPage coursesRootPage = null;
     CourseCardPage courseCardPage = null;
     StandartWaiter standartWaiter = null;
-//    SoftAssertions softly = new SoftAssertions();
+    //    SoftAssertions softly = new SoftAssertions();
 
     @BeforeEach
     void beforeEach() {
-        String webDriverName = System.getProperty("browser", "edge").toLowerCase();
+        String webDriverName = System.getProperty("browser", "firefox").toLowerCase();
         driver = webDriverFactory.create(webDriverName, "maximize");
         assertWithLog = new AssertWithLog(driver, logger);
         standartWaiter = new StandartWaiter(driver);
@@ -109,16 +109,15 @@ public class Courses_Test {
         coursesRootPage = new CoursesRootPage(driver);
         //coursesRootPage.getCoursesCardsListComponent().clickShowMoreWhileUCan();
 
-        coursesRootPage.openLinksInNewTabAndCollectTexts().forEach((checkTitle, checkContent) -> {
-            assertWithLog.assertWithLog(
-                    checkContent.length()>1,
-                    checkTitle
-            );
-        });
-
-
-
-
+        assertAll(
+                () ->
+                        coursesRootPage.openLinksInNewTabAndCollectTexts().forEach((checkTitle, checkContent) -> {
+                            assertWithLog.assertWithLog(
+                                    checkContent.length() > 1,
+                                    checkTitle
+                            );
+                        })
+        );
 
     }
 

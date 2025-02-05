@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public abstract class AbstractPage {
-    String BASE_URL = System.getProperty("base.url");
+    protected static final String BASE_URL = System.getProperty("base.url");
 
     abstract void openPage();
 
@@ -23,14 +23,6 @@ public abstract class AbstractPage {
 
     private final By bannerCloseBtnClass = By.className("js-sticky-banner-close");
     private final By cookieCloseBtnXPath = By.xpath("//a[contains(@href, '/legal/cookie')]//following::button[1]"); // //ancestor::div[1]
-
-//    public WebElement getBannerCloseBtn() {
-//        return driver.findElement(bannerCloseBtnClass);
-//    }
-//
-//    public WebElement getCookieCloseBtn() {
-//        return driver.findElement(cookieCloseBtnXPath);
-//    }
 
     public AbstractPage(WebDriver driver){
         this.driver = driver;

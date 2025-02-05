@@ -5,11 +5,10 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.*;
+import java.util.List;
+import java.util.Locale;
 
 public class EventsPage extends AbstractPage{
     String pageUrl = BASE_URL + "/events/";
@@ -38,11 +37,9 @@ public class EventsPage extends AbstractPage{
         }
         while (standartWaiter.waitForElementVisible(eventsListComponent.getLoader()));
     }
-
-
-    public String convertDateToString (Date date, String pattern) {
-        return new SimpleDateFormat(pattern).format(date);
-
+    public String convertDateToString (LocalDate localDate, String pattern) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern);
+        return localDate.format(formatter);
     }
     public LocalDate convertStringToDate (String strDate, String pattern) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern, new Locale("ru"));

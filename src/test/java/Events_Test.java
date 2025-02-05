@@ -24,7 +24,7 @@ public class Events_Test {
 
     @BeforeEach
     void beforeEach() {
-        String webDriverName = System.getProperty("browser", "edge").toLowerCase();
+        String webDriverName = System.getProperty("browser", "firefox").toLowerCase();
         driver = webDriverFactory.create(webDriverName, "maximize");
         assertWithLog = new AssertWithLog(driver, logger);
 

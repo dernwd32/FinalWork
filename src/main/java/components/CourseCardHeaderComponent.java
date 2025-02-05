@@ -24,6 +24,8 @@ public class CourseCardHeaderComponent extends AbstractComponent{
     private final By subHeaderCourseFormatXPath = By.xpath(subHeaderInfoBlockRoot + "//*[local-name()='path' and @d='" + imgFormatD + "']//following::p[1]");
 
 
+
+
     public WebElement getH1Title() {
         standartWaiter.waitForElementLocatedAndVisible(h1TitleXPath);
         return getRootElement().findElement(h1TitleXPath); }
@@ -37,9 +39,10 @@ public class CourseCardHeaderComponent extends AbstractComponent{
         standartWaiter.waitForElementLocatedAndVisible(subHeaderCourseFormatXPath);
         return getRootElement().findElement(subHeaderCourseFormatXPath);    }
 
-    public By getSubHeaderCourseFormatXPath() {
-        return subHeaderCourseFormatXPath;
-    }
+    public By getSubHeaderCourseFormatXPath() {        return subHeaderCourseFormatXPath;    }
+    public By getH1TitleXPath() {        return h1TitleXPath;    }
+    public By getDescrSubtitleXPath() {        return descrSubtitleXPath;    }
+    public By getSubHeaderCourseDurationXPath() {        return subHeaderCourseDurationXPath;    }
 
     public boolean isntEmpty(WebElement element) {
         return !element.getText().isEmpty();
