@@ -1,5 +1,6 @@
 package webdriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -27,17 +28,20 @@ public class WebDriverFactory implements IWebDriver{
         switch (webDriverName) {
 
             case "firefox" -> {
+                WebDriverManager.firefoxdriver().setup();
                 FirefoxOptions options = new FirefoxOptions();
                 //Если начинается с дефиса - передаём в options браузера, иначе - через driver.manage
                 if (argsWasSet) options.addArguments(mode);
                 driver = new FirefoxDriver(options);
             }
             case "chrome" -> {
+                WebDriverManager.chromiumdriver().setup();
                 ChromeOptions options = new ChromeOptions();
                 if (argsWasSet) options.addArguments(mode);
                 driver = new ChromeDriver(options);
             }
             case "edge" -> {
+                WebDriverManager.edgedriver().setup();
                 EdgeOptions options = new EdgeOptions();
                 if (argsWasSet) options.addArguments(mode);
                 driver = new EdgeDriver(options);

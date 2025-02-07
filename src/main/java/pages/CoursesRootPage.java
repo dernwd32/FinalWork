@@ -1,12 +1,10 @@
 package pages;
 
-import components.CourseCardHeaderComponent;
-import components.CoursesCardsListComponent;
-import components.CoursesTypesMenuComponent;
+import components.AbstractComponent;
+import components.courses.*;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.*;
@@ -66,13 +64,9 @@ public class CoursesRootPage extends AbstractPage{
         return cardsInList().size();
     }
 
-    public Map<String, String> openLinksInNewTabAndCollectTexts(){
-
-        //CourseCardPage courseCardPage = new CourseCardPage(driver);
-        CourseCardHeaderComponent courseCardHeaderComponent = new CourseCardHeaderComponent(driver);
+    public LinkedHashMap<String, String> openLinksInNewTabAndCollectTexts(){
 
         LinkedHashMap<String, String> textsInCard = new LinkedHashMap<>();
-
 
         for (WebElement thisCard : cardsInList()) {
 
@@ -82,6 +76,14 @@ public class CoursesRootPage extends AbstractPage{
 
             ArrayList<String> tabs = new ArrayList<> (driver.getWindowHandles());
             driver.switchTo().window(tabs.getLast());
+
+            AbstractCourseCardHeaderComponent courseCardHeaderComponent = null;
+            if (Objects.equals(driver.getCurrentUrl(), "https://otus.ru/online/manualtesting"))
+                courseCardHeaderComponent = new CourseOldCardHeaderComponent(driver);
+            else
+                courseCardHeaderComponent = new CourseCardHeaderComponent(driver);
+
+
 
             if (standartWaiter.waitForElementLocatedAndVisible(
                     courseCardHeaderComponent.getSubHeaderCourseFormatXPath(),
@@ -112,7 +114,7 @@ public class CoursesRootPage extends AbstractPage{
                         driver.getCurrentUrl() + " - формат",
                         courseCardHeaderComponent.getSubHeaderCourseFormat().getText()
                 );
-            } else textsInCard.put(driver.getCurrentUrl() + "элемент не найден по локатору", "");
+            } else textsInCard.put(driver.getCurrentUrl() + " - элемент не найден по локатору", "");
 
 
             driver.close(); //закрывает текущее окно

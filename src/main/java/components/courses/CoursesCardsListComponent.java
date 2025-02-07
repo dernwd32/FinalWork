@@ -1,16 +1,15 @@
-package components;
+package components.courses;
 
 import annotations.ComponentBlueprint;
+import components.AbstractComponent;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 
 import java.util.List;
 
 @ComponentBlueprint( rootLocator = "//div[contains(text(),'Каталог')]/ancestor::section" )
-public class CoursesCardsListComponent extends AbstractComponent{
+public class CoursesCardsListComponent extends AbstractComponent {
     public CoursesCardsListComponent(WebDriver driver) {
         super(driver);
     }
@@ -19,12 +18,6 @@ public class CoursesCardsListComponent extends AbstractComponent{
     private final By cardsInListXPath = By.xpath(".//a");
     private final By showMoreBtnXPath = By.xpath(".//button[contains(text(),'Показать')]");
     private final By searchLoader = By.xpath(".//label[contains(text(),'Поиск')]//following::div[1]//div");
-    //div[contains(text(),'Каталог')]/ancestor::section//label[contains(text(),'Поиск')]//following::div[1]//div
-    //label[contains(text(),'Поиск')]//following::*[local-name()='circle' and @cx='11.767']
-    //div[contains(text(),'Каталог')]/following::a[starts-with(@href, '/less')]
-
-
-
 
     public List<WebElement> getCardsInList() {
         return getRootElement().findElements(cardsInListXPath);
@@ -36,7 +29,7 @@ public class CoursesCardsListComponent extends AbstractComponent{
     }
 
     public WebElement getShowMoreBtn() {
-        if (standartWaiter.waitForElementLocatedAndVisible(showMoreBtnXPath))
+        if (standartWaiter.waitForElementLocatedAndVisible(500, showMoreBtnXPath))
             return getRootElement().findElement(showMoreBtnXPath);
         else return null;
     }

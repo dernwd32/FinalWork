@@ -2,7 +2,6 @@ package components;
 
 import annotations.ComponentBlueprint;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import waiters.StandartWaiter;
@@ -19,16 +18,36 @@ public abstract class AbstractComponent {
         standartWaiter = new StandartWaiter(driver);
     }
 
-//    public WebElement waitAndReturnWebElement(By locator){
-//        standartWaiter.waitForElementLocatedAndVisible(locator);
-//        return driver.findElement(locator);
-//    }
-
     public WebElement getRootElement() {
         standartWaiter.waitForElementLocatedAndVisible(rootLocator);
         return driver.findElement(rootLocator);
     }
 
+    public By getByFromString(String someLocator) {
+        String[] parsed = someLocator.split(">>>");
+
+        //если не указан тип в строке, считаем, что это xpath
+        if (parsed.length==1) return By.xpath(parsed[0]);
+
+        switch (parsed[0]) {
+            case "css" -> {
+                return By.cssSelector(parsed[1]);
+            }
+            case "id" -> {
+                return By.id(parsed[1]);
+            }
+            case "class" -> {
+                return By.className(parsed[1]);
+            }
+            case "name" -> {
+                return By.name(parsed[1]);
+            }
+            default -> {
+                return By.xpath(parsed[1]);
+            }
+        }
+
+    }
 
     public Object getMetaValues(String metaName) {
         Class clazz = this.getClass();
@@ -37,7 +56,8 @@ public abstract class AbstractComponent {
             switch (metaName){
                 case "rootLocator" -> {
                     //standartWaiter.waitForElementVisible(driver.findElement(By.xpath(componentBlueprint.rootLocator())));
-                    return By.xpath(componentBlueprint.rootLocator());
+                    //return By.xpath(componentBlueprint.rootLocator());
+                    return getByFromString(componentBlueprint.rootLocator());
                 }
             }
         }

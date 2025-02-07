@@ -53,7 +53,7 @@ public class AssertWithLog {
     // основной перегруженный метод
     // работает с дефолтным конструктором
     public void assertWithLog(boolean condition, String message, Logger logger, String currentBrowser) {
-        SoftAssertions softly = new SoftAssertions();
+        //SoftAssertions softly = new SoftAssertions();
         message = String.format("%-125s",
                         String.format("%-18s", "[" + currentBrowser + "]")
                         + "-> "
@@ -66,7 +66,13 @@ public class AssertWithLog {
         if (condition) logger.info(messagePass);
         else logger.error(messageFail);
 
+
         assertTrue(condition);
-        softly.assertThat(condition).isTrue();
+
+//        if (condition) return true;
+//        else  throw new AssertionError(message);
+
+        //return condition;
+        //softly.assertThat(condition).isTrue();
     }
 }

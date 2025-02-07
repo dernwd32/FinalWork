@@ -1,6 +1,7 @@
-package components;
+package components.events;
 
 import annotations.ComponentBlueprint;
+import components.AbstractComponent;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 
 @ComponentBlueprint( rootLocator = "//section[@class='dod_new-events']")
-public class EventsListComponent extends AbstractComponent{
+public class EventsListComponent extends AbstractComponent {
     public EventsListComponent(WebDriver driver) {
         super(driver);
     }

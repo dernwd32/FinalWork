@@ -1,18 +1,22 @@
-package components;
+package components.courses;
 
 import annotations.ComponentBlueprint;
+import components.AbstractComponent;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import waiters.StandartWaiter;
 
-@ComponentBlueprint( rootLocator = "//*[local-name()='svg' and @width='7' and @height='10']//ancestor::section")
-//section//a[contains(text(),'Тестирование') and contains(@href,'categories/testing')]//ancestor::section
-public class CourseCardHeaderComponent extends AbstractComponent{
-   StandartWaiter standartWaiter = new StandartWaiter(driver);
+@ComponentBlueprint( rootLocator = "xpath>>>//*[local-name()='svg' and @width='7' and @height='10']//ancestor::section")
+public class CourseCardHeaderComponent  extends AbstractCourseCardHeaderComponent {
 
     public CourseCardHeaderComponent(WebDriver driver) {
         super(driver);
+        //передаем значения полей наследника в поля абстрактного класса для методов, реализованных в абстрактном классе
+        setH1TitleXPath(h1TitleXPath);
+        setDescrSubtitleXPath(descrSubtitleXPath);
+        setSubHeaderCourseDurationXPath(subHeaderCourseDurationXPath);
+        setSubHeaderCourseFormatXPath(subHeaderCourseFormatXPath);
     }
 
     private final By h1TitleXPath = By.xpath(".//h1");
@@ -24,27 +28,4 @@ public class CourseCardHeaderComponent extends AbstractComponent{
     private final By subHeaderCourseFormatXPath = By.xpath(subHeaderInfoBlockRoot + "//*[local-name()='path' and @d='" + imgFormatD + "']//following::p[1]");
 
 
-
-
-    public WebElement getH1Title() {
-        standartWaiter.waitForElementLocatedAndVisible(h1TitleXPath);
-        return getRootElement().findElement(h1TitleXPath); }
-    public WebElement getDescrSubtitle() {
-        standartWaiter.waitForElementLocatedAndVisible(descrSubtitleXPath);
-        return getRootElement().findElement(descrSubtitleXPath);   }
-    public WebElement getSubHeaderCourseDuration() {
-        standartWaiter.waitForElementLocatedAndVisible(subHeaderCourseDurationXPath);
-        return getRootElement().findElement(subHeaderCourseDurationXPath);    }
-    public WebElement getSubHeaderCourseFormat() {
-        standartWaiter.waitForElementLocatedAndVisible(subHeaderCourseFormatXPath);
-        return getRootElement().findElement(subHeaderCourseFormatXPath);    }
-
-    public By getSubHeaderCourseFormatXPath() {        return subHeaderCourseFormatXPath;    }
-    public By getH1TitleXPath() {        return h1TitleXPath;    }
-    public By getDescrSubtitleXPath() {        return descrSubtitleXPath;    }
-    public By getSubHeaderCourseDurationXPath() {        return subHeaderCourseDurationXPath;    }
-
-    public boolean isntEmpty(WebElement element) {
-        return !element.getText().isEmpty();
-    }
 }
