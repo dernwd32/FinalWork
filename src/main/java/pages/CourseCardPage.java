@@ -2,7 +2,6 @@ package pages;
 
 import components.AbstractComponent;
 import components.courses.CourseCardHeaderComponent;
-import components.courses.CourseOldCardHeaderComponent;
 import org.openqa.selenium.WebDriver;
 
 import java.util.Objects;
@@ -25,15 +24,7 @@ public class CourseCardPage extends AbstractPage{
      * вот сюда вероятно можно подбросить компонент старого шаблона страницы
      *
      */
+    CourseCardHeaderComponent courseCardHeaderComponent = new CourseCardHeaderComponent(driver);
 
-    public AbstractComponent getCourseCardHeaderComponent() {
-        CourseCardHeaderComponent courseCardHeaderComponent = new CourseCardHeaderComponent(driver);
-        CourseOldCardHeaderComponent courseOldCardHeaderComponent = new CourseOldCardHeaderComponent(driver);
-
-        if (Objects.equals(driver.getCurrentUrl(), "https://otus.ru/online/manualtesting"))
-            return courseOldCardHeaderComponent;
-        else
-            return courseCardHeaderComponent;
-    }
 
 }

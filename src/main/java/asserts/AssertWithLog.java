@@ -4,8 +4,6 @@ import org.apache.logging.log4j.Logger;
 import org.assertj.core.api.SoftAssertions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
-
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
@@ -20,7 +18,7 @@ public class AssertWithLog {
     }
 
     //дефолтный конструктор
-    public AssertWithLog(){};
+    public AssertWithLog(){}
 
     // Метод принимающий только условие, автоматически вычисляющий всё остальное.
     // Работает с конструктором AssertWithLog(WebDriver driver, ILog ILog)
@@ -53,7 +51,7 @@ public class AssertWithLog {
     // основной перегруженный метод
     // работает с дефолтным конструктором
     public void assertWithLog(boolean condition, String message, Logger logger, String currentBrowser) {
-        //SoftAssertions softly = new SoftAssertions();
+
         message = String.format("%-125s",
                         String.format("%-18s", "[" + currentBrowser + "]")
                         + "-> "
@@ -67,12 +65,8 @@ public class AssertWithLog {
         else logger.error(messageFail);
 
 
-        assertTrue(condition);
-
-//        if (condition) return true;
-//        else  throw new AssertionError(message);
-
-        //return condition;
-        //softly.assertThat(condition).isTrue();
+      //  assertTrue(condition);
+        SoftAssertions softly = new SoftAssertions();
+        softly.assertThat(condition).isTrue();
     }
 }

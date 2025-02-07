@@ -1,6 +1,5 @@
 package pages;
 
-import components.AbstractComponent;
 import components.courses.*;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -29,6 +28,7 @@ public class CoursesRootPage extends AbstractPage{
     public CoursesCardsListComponent getCoursesCardsListComponent() {
         return coursesCardsListComponent;
     }
+
     public CoursesTypesMenuComponent getCoursesTypesMenuComponent() {
         return coursesTypesMenuComponent;
     }
@@ -64,55 +64,50 @@ public class CoursesRootPage extends AbstractPage{
         return cardsInList().size();
     }
 
-    public LinkedHashMap<String, String> openLinksInNewTabAndCollectTexts(){
+    public LinkedHashMap<String, String> openLinksInNewTabAndCollectTexts() {
 
         LinkedHashMap<String, String> textsInCard = new LinkedHashMap<>();
 
         for (WebElement thisCard : cardsInList()) {
 
-           // System.out.println(++i + ": \n" + thisCard.getText());
+            // System.out.println(++i + ": \n" + thisCard.getText());
             thisCard.sendKeys(Keys.CONTROL, Keys.RETURN);
             standartWaiter.waitForCondition(ExpectedConditions.numberOfWindowsToBe(2));
 
-            ArrayList<String> tabs = new ArrayList<> (driver.getWindowHandles());
+            ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
             driver.switchTo().window(tabs.getLast());
 
-            AbstractCourseCardHeaderComponent courseCardHeaderComponent = null;
-            if (Objects.equals(driver.getCurrentUrl(), "https://otus.ru/online/manualtesting"))
-                courseCardHeaderComponent = new CourseOldCardHeaderComponent(driver);
-            else
-                courseCardHeaderComponent = new CourseCardHeaderComponent(driver);
 
-
+            CourseCardHeaderComponent courseCardHeaderComponent = new CourseCardHeaderComponent(driver);
 
             if (standartWaiter.waitForElementLocatedAndVisible(
-                    courseCardHeaderComponent.getSubHeaderCourseFormatXPath(),
-                    courseCardHeaderComponent.getDescrSubtitleXPath(),
-                    courseCardHeaderComponent.getH1TitleXPath(),
-                    courseCardHeaderComponent.getSubHeaderCourseDurationXPath()
+                    courseCardHeaderComponent.getFormatXPath(),
+                    courseCardHeaderComponent.getDescrXPath(),
+                    courseCardHeaderComponent.getTitleXPath(),
+                    courseCardHeaderComponent.getDurationXPath()
             )) {
 
                 System.out.println(
-                        courseCardHeaderComponent.getH1Title().getText() + " \n"
-                                + courseCardHeaderComponent.getDescrSubtitle().getText() + " \n"
-                                + courseCardHeaderComponent.getSubHeaderCourseDuration().getText() + " \n"
-                                + courseCardHeaderComponent.getSubHeaderCourseFormat().getText());
+                        courseCardHeaderComponent.getTitle().getText() + " \n"
+                                + courseCardHeaderComponent.getDescr().getText() + " \n"
+                                + courseCardHeaderComponent.getDuration().getText() + " \n"
+                                + courseCardHeaderComponent.getFormat().getText());
 
                 textsInCard.put(
                         driver.getCurrentUrl() + " - заголовок",
-                        courseCardHeaderComponent.getH1Title().getText()
+                        courseCardHeaderComponent.getTitle().getText()
                 );
                 textsInCard.put(
                         driver.getCurrentUrl() + " - описание",
-                        courseCardHeaderComponent.getDescrSubtitle().getText()
+                        courseCardHeaderComponent.getDescr().getText()
                 );
                 textsInCard.put(
                         driver.getCurrentUrl() + " - длительность",
-                        courseCardHeaderComponent.getSubHeaderCourseDuration().getText()
+                        courseCardHeaderComponent.getDuration().getText()
                 );
                 textsInCard.put(
                         driver.getCurrentUrl() + " - формат",
-                        courseCardHeaderComponent.getSubHeaderCourseFormat().getText()
+                        courseCardHeaderComponent.getFormat().getText()
                 );
             } else textsInCard.put(driver.getCurrentUrl() + " - элемент не найден по локатору", "");
 
@@ -126,3 +121,4 @@ public class CoursesRootPage extends AbstractPage{
     }
 
 }
+

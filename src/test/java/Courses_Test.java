@@ -1,27 +1,13 @@
 import asserts.AssertWithLog;
-import components.courses.AbstractCourseCardHeaderComponent;
 import components.courses.CourseCardHeaderComponent;
-import components.courses.CourseOldCardHeaderComponent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.assertj.core.api.SoftAssertions;
 import org.junit.jupiter.api.*;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.provider.MethodSource;
-import org.junit.jupiter.params.provider.ValueSource;
 import org.openqa.selenium.WebDriver;
-import pages.CourseCardPage;
 import pages.CoursesRootPage;
 import webdriver.WebDriverFactory;
 
-import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
-import java.util.Objects;
-import java.util.stream.Stream;
-
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -32,7 +18,6 @@ public class Courses_Test {
     private final WebDriverFactory webDriverFactory = new WebDriverFactory();
     private AssertWithLog assertWithLog = null;
     private CoursesRootPage coursesRootPage = null;
-    private CourseCardPage courseCardPage = null;
 
     List tmp = List.of("1", "2");
 
@@ -92,34 +77,30 @@ public class Courses_Test {
                 thisCard -> {
                     driver.get(thisCard);
 
-                    AbstractCourseCardHeaderComponent courseCardHeaderComponent = null;
-                    if (Objects.equals(driver.getCurrentUrl(), "https://otus.ru/online/manualtesting"))
-                        courseCardHeaderComponent = new CourseOldCardHeaderComponent(driver);
-                    else
-                        courseCardHeaderComponent = new CourseCardHeaderComponent(driver);
+                    CourseCardHeaderComponent courseCardHeaderComponent = new CourseCardHeaderComponent(driver);
 
                     assertWithLog.assertWithLog(
                             courseCardHeaderComponent.isntEmpty(
                                     courseCardHeaderComponent
-                                            .getH1Title()),
+                                            .getTitle()),
                             thisCard + " заголовок"
                     );
                     assertWithLog.assertWithLog(
                             courseCardHeaderComponent.isntEmpty(
                                     courseCardHeaderComponent
-                                            .getDescrSubtitle()),
+                                            .getDescr()),
                             thisCard + " описание"
                     );
                     assertWithLog.assertWithLog(
                             courseCardHeaderComponent.isntEmpty(
                                     courseCardHeaderComponent
-                                            .getSubHeaderCourseDuration()),
+                                            .getDuration()),
                             thisCard + " длительность"
                     );
                     assertWithLog.assertWithLog(
                             courseCardHeaderComponent.isntEmpty(
                                     courseCardHeaderComponent
-                                            .getSubHeaderCourseFormat()),
+                                            .getFormat()),
                             thisCard + " формат"
                     );
 

@@ -6,21 +6,17 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
-import pages.CourseCardPage;
-import pages.CoursesRootPage;
 import pages.EventsPage;
-import waiters.StandartWaiter;
 import webdriver.WebDriverFactory;
 
-import java.time.LocalDate;
 
 public class Events_Test {
 
     private static final Logger logger = LogManager.getLogger(Events_Test.class);
-    WebDriver driver;
-    WebDriverFactory webDriverFactory = new WebDriverFactory();
-    AssertWithLog assertWithLog = null;
-    EventsPage eventsPage = null;
+    private WebDriver driver;
+    private WebDriverFactory webDriverFactory = new WebDriverFactory();
+    private AssertWithLog assertWithLog = null;
+    private EventsPage eventsPage = null;
 
     @BeforeEach
     void beforeEach() {

@@ -1,8 +1,6 @@
 package annotations;
 
 
-import org.openqa.selenium.By;
-
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

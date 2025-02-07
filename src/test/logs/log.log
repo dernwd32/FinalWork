@@ -1946,3 +1946,443 @@
 2025-02-07 13:09:53 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa описание                                                                  > PASS
 2025-02-07 13:09:53 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa длительность                                                              > PASS
 2025-02-07 13:09:53 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa формат                                                                    > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-lead/ - заголовок                                                             > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-lead/ - описание                                                              > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-lead/ - длительность                                                          > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-lead/ - формат                                                                > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer/ - заголовок                                                         > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer/ - описание                                                          > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer/ - длительность                                                      > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer/ - формат                                                            > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs/ - заголовок                                                                > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs/ - описание                                                                 > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs/ - длительность                                                             > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs/ - формат                                                                   > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya/ - заголовок                                    > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya/ - описание                                     > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya/ - длительность                                 > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya/ - формат                                       > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa/ - заголовок                                                              > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa/ - описание                                                               > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa/ - длительность                                                           > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa/ - формат                                                                 > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization/ - заголовок                                         > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization/ - описание                                          > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization/ - длительность                                      > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization/ - формат                                            > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic/ - заголовок                                                       > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic/ - описание                                                        > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic/ - длительность                                                    > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic/ - формат                                                          > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-game/ - заголовок                                                             > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-game/ - описание                                                              > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-game/ - длительность                                                          > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-game/ - формат                                                                > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro/ - заголовок                                                         > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro/ - описание                                                          > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro/ - длительность                                                      > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro/ - формат                                                            > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer/ - заголовок                                                  > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer/ - описание                                                   > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer/ - длительность                                               > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer/ - формат                                                     > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting - заголовок                                                         > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting - описание                                                          > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting - длительность                                                      > PASS
+2025-02-07 19:29:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting - формат                                                            > PASS
+2025-02-07 20:43:49 ERROR Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-lead/ - элемент не найден по локатору                                         > FAIL
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-lead/ - заголовок                                                             > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-lead/ - описание                                                              > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-lead/ - длительность                                                          > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-lead/ - формат                                                                > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer/ - заголовок                                                         > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer/ - описание                                                          > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer/ - длительность                                                      > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer/ - формат                                                            > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs/ - заголовок                                                                > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs/ - описание                                                                 > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs/ - длительность                                                             > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs/ - формат                                                                   > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya/ - заголовок                                    > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya/ - описание                                     > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya/ - длительность                                 > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya/ - формат                                       > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa/ - заголовок                                                              > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa/ - описание                                                               > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa/ - длительность                                                           > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa/ - формат                                                                 > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization/ - заголовок                                         > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization/ - описание                                          > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization/ - длительность                                      > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization/ - формат                                            > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic/ - заголовок                                                       > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic/ - описание                                                        > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic/ - длительность                                                    > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic/ - формат                                                          > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-game/ - заголовок                                                             > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-game/ - описание                                                              > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-game/ - длительность                                                          > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-game/ - формат                                                                > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro/ - заголовок                                                         > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro/ - описание                                                          > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro/ - длительность                                                      > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro/ - формат                                                            > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer/ - заголовок                                                  > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer/ - описание                                                   > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer/ - длительность                                               > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer/ - формат                                                     > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting - заголовок                                                         > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting - описание                                                          > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting - длительность                                                      > PASS
+2025-02-07 20:47:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting - формат                                                            > PASS
+2025-02-07 20:53:35 INFO  Courses_Test    - [chrome]          -> курсов на странице = 10                                                                                  > PASS
+2025-02-07 20:58:25 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer заголовок                                                     > PASS
+2025-02-07 20:58:26 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer описание                                                      > PASS
+2025-02-07 20:58:26 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer длительность                                                  > PASS
+2025-02-07 20:58:26 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer формат                                                        > PASS
+2025-02-07 20:58:31 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya заголовок                                       > PASS
+2025-02-07 20:58:31 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya описание                                        > PASS
+2025-02-07 20:58:31 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya длительность                                    > PASS
+2025-02-07 20:58:31 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya формат                                          > PASS
+2025-02-07 20:58:35 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting заголовок                                                           > PASS
+2025-02-07 20:58:35 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting описание                                                            > PASS
+2025-02-07 20:58:35 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting длительность                                                        > PASS
+2025-02-07 20:58:35 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting формат                                                              > PASS
+2025-02-07 20:58:40 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic заголовок                                                          > PASS
+2025-02-07 20:58:40 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic описание                                                           > PASS
+2025-02-07 20:58:40 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic длительность                                                       > PASS
+2025-02-07 20:58:40 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic формат                                                             > PASS
+2025-02-07 20:58:46 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-lead заголовок                                                                > PASS
+2025-02-07 20:58:46 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-lead описание                                                                 > PASS
+2025-02-07 20:58:46 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-lead длительность                                                             > PASS
+2025-02-07 20:58:46 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-lead формат                                                                   > PASS
+2025-02-07 20:58:51 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro заголовок                                                            > PASS
+2025-02-07 20:58:51 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro описание                                                             > PASS
+2025-02-07 20:58:51 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro длительность                                                         > PASS
+2025-02-07 20:58:51 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro формат                                                               > PASS
+2025-02-07 20:58:55 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization заголовок                                            > PASS
+2025-02-07 20:58:55 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization описание                                             > PASS
+2025-02-07 20:58:55 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization длительность                                         > PASS
+2025-02-07 20:58:55 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization формат                                               > PASS
+2025-02-07 20:59:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-game заголовок                                                                > PASS
+2025-02-07 20:59:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-game описание                                                                 > PASS
+2025-02-07 20:59:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-game длительность                                                             > PASS
+2025-02-07 20:59:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-game формат                                                                   > PASS
+2025-02-07 20:59:10 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs заголовок                                                                   > PASS
+2025-02-07 20:59:10 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs описание                                                                    > PASS
+2025-02-07 20:59:10 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs длительность                                                                > PASS
+2025-02-07 20:59:10 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs формат                                                                      > PASS
+2025-02-07 20:59:14 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer заголовок                                                            > PASS
+2025-02-07 20:59:14 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer описание                                                             > PASS
+2025-02-07 20:59:14 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer длительность                                                         > PASS
+2025-02-07 20:59:14 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer формат                                                               > PASS
+2025-02-07 21:00:00 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa заголовок                                                                 > PASS
+2025-02-07 21:00:00 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa описание                                                                  > PASS
+2025-02-07 21:00:00 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa длительность                                                              > PASS
+2025-02-07 21:00:00 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa формат                                                                    > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-lead/ - заголовок                                                             > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-lead/ - описание                                                              > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-lead/ - длительность                                                          > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-lead/ - формат                                                                > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer/ - заголовок                                                         > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer/ - описание                                                          > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer/ - длительность                                                      > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer/ - формат                                                            > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs/ - заголовок                                                                > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs/ - описание                                                                 > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs/ - длительность                                                             > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs/ - формат                                                                   > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya/ - заголовок                                    > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya/ - описание                                     > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya/ - длительность                                 > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya/ - формат                                       > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa/ - заголовок                                                              > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa/ - описание                                                               > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa/ - длительность                                                           > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa/ - формат                                                                 > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization/ - заголовок                                         > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization/ - описание                                          > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization/ - длительность                                      > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization/ - формат                                            > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic/ - заголовок                                                       > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic/ - описание                                                        > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic/ - длительность                                                    > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic/ - формат                                                          > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-game/ - заголовок                                                             > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-game/ - описание                                                              > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-game/ - длительность                                                          > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-game/ - формат                                                                > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro/ - заголовок                                                         > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro/ - описание                                                          > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro/ - длительность                                                      > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro/ - формат                                                            > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer/ - заголовок                                                  > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer/ - описание                                                   > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer/ - длительность                                               > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer/ - формат                                                     > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting - заголовок                                                         > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting - описание                                                          > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting - длительность                                                      > PASS
+2025-02-07 21:01:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting - формат                                                            > PASS
+2025-02-07 21:02:04 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer заголовок                                                     > PASS
+2025-02-07 21:02:04 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer описание                                                      > PASS
+2025-02-07 21:02:04 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer длительность                                                  > PASS
+2025-02-07 21:02:05 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer формат                                                        > PASS
+2025-02-07 21:02:09 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya заголовок                                       > PASS
+2025-02-07 21:02:10 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya описание                                        > PASS
+2025-02-07 21:02:10 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya длительность                                    > PASS
+2025-02-07 21:02:10 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya формат                                          > PASS
+2025-02-07 21:02:13 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting заголовок                                                           > PASS
+2025-02-07 21:02:13 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting описание                                                            > PASS
+2025-02-07 21:02:13 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting длительность                                                        > PASS
+2025-02-07 21:02:13 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting формат                                                              > PASS
+2025-02-07 21:02:21 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic заголовок                                                          > PASS
+2025-02-07 21:02:21 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic описание                                                           > PASS
+2025-02-07 21:02:21 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic длительность                                                       > PASS
+2025-02-07 21:02:21 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic формат                                                             > PASS
+2025-02-07 21:02:27 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-lead заголовок                                                                > PASS
+2025-02-07 21:02:27 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-lead описание                                                                 > PASS
+2025-02-07 21:02:27 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-lead длительность                                                             > PASS
+2025-02-07 21:02:27 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-lead формат                                                                   > PASS
+2025-02-07 21:02:31 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro заголовок                                                            > PASS
+2025-02-07 21:02:31 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro описание                                                             > PASS
+2025-02-07 21:02:32 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro длительность                                                         > PASS
+2025-02-07 21:02:32 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro формат                                                               > PASS
+2025-02-07 21:02:36 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization заголовок                                            > PASS
+2025-02-07 21:02:36 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization описание                                             > PASS
+2025-02-07 21:02:36 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization длительность                                         > PASS
+2025-02-07 21:02:36 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization формат                                               > PASS
+2025-02-07 21:02:41 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-game заголовок                                                                > PASS
+2025-02-07 21:02:41 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-game описание                                                                 > PASS
+2025-02-07 21:02:41 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-game длительность                                                             > PASS
+2025-02-07 21:02:41 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-game формат                                                                   > PASS
+2025-02-07 21:02:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs заголовок                                                                   > PASS
+2025-02-07 21:02:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs описание                                                                    > PASS
+2025-02-07 21:02:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs длительность                                                                > PASS
+2025-02-07 21:02:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs формат                                                                      > PASS
+2025-02-07 21:02:52 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer заголовок                                                            > PASS
+2025-02-07 21:02:52 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer описание                                                             > PASS
+2025-02-07 21:02:52 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer длительность                                                         > PASS
+2025-02-07 21:02:52 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer формат                                                               > PASS
+2025-02-07 21:02:56 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa заголовок                                                                 > PASS
+2025-02-07 21:02:56 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa описание                                                                  > PASS
+2025-02-07 21:02:56 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa длительность                                                              > PASS
+2025-02-07 21:02:56 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa формат                                                                    > PASS
+2025-02-07 21:03:04 INFO  Courses_Test    - [chrome]          -> курсов на странице = 10                                                                                  > PASS
+2025-02-07 21:03:36 INFO  Events_Test     - [firefox]         -> заголовки карточек соответствуют фильтру                                                                 > PASS
+2025-02-07 21:04:00 INFO  Events_Test     - [firefox]         -> мероприятий в разделе: 163                                                                               > PASS
+2025-02-07 21:04:01 INFO  Events_Test     - [firefox]         -> все даты мероприятий в будущем                                                                           > PASS
+2025-02-07 22:42:17 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer заголовок                                                     > PASS
+2025-02-07 22:42:18 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer описание                                                      > PASS
+2025-02-07 22:42:19 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer длительность                                                  > PASS
+2025-02-07 22:42:19 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer формат                                                        > PASS
+2025-02-07 22:42:27 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya заголовок                                       > PASS
+2025-02-07 22:42:27 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya описание                                        > PASS
+2025-02-07 22:42:27 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya длительность                                    > PASS
+2025-02-07 22:42:27 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya формат                                          > PASS
+2025-02-07 22:42:30 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting заголовок                                                           > PASS
+2025-02-07 22:42:30 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting описание                                                            > PASS
+2025-02-07 22:42:30 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting длительность                                                        > PASS
+2025-02-07 22:42:30 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting формат                                                              > PASS
+2025-02-07 22:42:35 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic заголовок                                                          > PASS
+2025-02-07 22:42:35 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic описание                                                           > PASS
+2025-02-07 22:42:35 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic длительность                                                       > PASS
+2025-02-07 22:42:35 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic формат                                                             > PASS
+2025-02-07 22:42:43 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-lead заголовок                                                                > PASS
+2025-02-07 22:42:43 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-lead описание                                                                 > PASS
+2025-02-07 22:42:44 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-lead длительность                                                             > PASS
+2025-02-07 22:42:44 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-lead формат                                                                   > PASS
+2025-02-07 22:42:48 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro заголовок                                                            > PASS
+2025-02-07 22:42:48 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro описание                                                             > PASS
+2025-02-07 22:42:48 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro длительность                                                         > PASS
+2025-02-07 22:42:48 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro формат                                                               > PASS
+2025-02-07 22:42:52 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization заголовок                                            > PASS
+2025-02-07 22:42:52 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization описание                                             > PASS
+2025-02-07 22:42:52 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization длительность                                         > PASS
+2025-02-07 22:42:52 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization формат                                               > PASS
+2025-02-07 22:42:58 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-game заголовок                                                                > PASS
+2025-02-07 22:42:58 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-game описание                                                                 > PASS
+2025-02-07 22:42:58 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-game длительность                                                             > PASS
+2025-02-07 22:42:58 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-game формат                                                                   > PASS
+2025-02-07 22:43:04 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs заголовок                                                                   > PASS
+2025-02-07 22:43:04 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs описание                                                                    > PASS
+2025-02-07 22:43:04 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs длительность                                                                > PASS
+2025-02-07 22:43:04 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs формат                                                                      > PASS
+2025-02-07 22:43:45 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer заголовок                                                            > PASS
+2025-02-07 22:43:46 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer описание                                                             > PASS
+2025-02-07 22:43:46 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer длительность                                                         > PASS
+2025-02-07 22:43:46 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer формат                                                               > PASS
+2025-02-07 22:43:49 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa заголовок                                                                 > PASS
+2025-02-07 22:43:49 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa описание                                                                  > PASS
+2025-02-07 22:43:49 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa длительность                                                              > PASS
+2025-02-07 22:43:49 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa формат                                                                    > PASS
+2025-02-07 22:45:33 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-lead/ - заголовок                                                             > PASS
+2025-02-07 22:45:33 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-lead/ - описание                                                              > PASS
+2025-02-07 22:45:33 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-lead/ - длительность                                                          > PASS
+2025-02-07 22:45:33 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-lead/ - формат                                                                > PASS
+2025-02-07 22:45:33 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer/ - заголовок                                                         > PASS
+2025-02-07 22:45:33 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer/ - описание                                                          > PASS
+2025-02-07 22:45:33 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer/ - длительность                                                      > PASS
+2025-02-07 22:45:33 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer/ - формат                                                            > PASS
+2025-02-07 22:45:33 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs/ - заголовок                                                                > PASS
+2025-02-07 22:45:33 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs/ - описание                                                                 > PASS
+2025-02-07 22:45:33 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs/ - длительность                                                             > PASS
+2025-02-07 22:45:33 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs/ - формат                                                                   > PASS
+2025-02-07 22:45:33 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya/ - заголовок                                    > PASS
+2025-02-07 22:45:33 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya/ - описание                                     > PASS
+2025-02-07 22:45:33 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya/ - длительность                                 > PASS
+2025-02-07 22:45:33 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya/ - формат                                       > PASS
+2025-02-07 22:45:33 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa/ - заголовок                                                              > PASS
+2025-02-07 22:45:33 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa/ - описание                                                               > PASS
+2025-02-07 22:45:33 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa/ - длительность                                                           > PASS
+2025-02-07 22:45:33 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa/ - формат                                                                 > PASS
+2025-02-07 22:45:33 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization/ - заголовок                                         > PASS
+2025-02-07 22:45:33 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization/ - описание                                          > PASS
+2025-02-07 22:45:33 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization/ - длительность                                      > PASS
+2025-02-07 22:45:33 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization/ - формат                                            > PASS
+2025-02-07 22:45:33 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic/ - заголовок                                                       > PASS
+2025-02-07 22:45:33 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic/ - описание                                                        > PASS
+2025-02-07 22:45:33 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic/ - длительность                                                    > PASS
+2025-02-07 22:45:33 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic/ - формат                                                          > PASS
+2025-02-07 22:45:33 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-game/ - заголовок                                                             > PASS
+2025-02-07 22:45:33 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-game/ - описание                                                              > PASS
+2025-02-07 22:45:33 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-game/ - длительность                                                          > PASS
+2025-02-07 22:45:33 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-game/ - формат                                                                > PASS
+2025-02-07 22:45:33 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro/ - заголовок                                                         > PASS
+2025-02-07 22:45:33 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro/ - описание                                                          > PASS
+2025-02-07 22:45:33 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro/ - длительность                                                      > PASS
+2025-02-07 22:45:33 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro/ - формат                                                            > PASS
+2025-02-07 22:45:34 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer/ - заголовок                                                  > PASS
+2025-02-07 22:45:34 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer/ - описание                                                   > PASS
+2025-02-07 22:45:34 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer/ - длительность                                               > PASS
+2025-02-07 22:45:34 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer/ - формат                                                     > PASS
+2025-02-07 22:45:34 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting - заголовок                                                         > PASS
+2025-02-07 22:45:34 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting - описание                                                          > PASS
+2025-02-07 22:45:34 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting - длительность                                                      > PASS
+2025-02-07 22:45:34 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting - формат                                                            > PASS
+2025-02-07 22:53:36 ERROR Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-lead/ - элемент не найден по локатору                                         > FAIL
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer/ - заголовок                                                         > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer/ - описание                                                          > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer/ - длительность                                                      > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer/ - формат                                                            > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs/ - заголовок                                                                > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs/ - описание                                                                 > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs/ - длительность                                                             > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs/ - формат                                                                   > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya/ - заголовок                                    > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya/ - описание                                     > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya/ - длительность                                 > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya/ - формат                                       > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa/ - заголовок                                                              > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa/ - описание                                                               > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa/ - длительность                                                           > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa/ - формат                                                                 > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization/ - заголовок                                         > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization/ - описание                                          > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization/ - длительность                                      > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization/ - формат                                            > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic/ - заголовок                                                       > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic/ - описание                                                        > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic/ - длительность                                                    > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic/ - формат                                                          > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-game/ - заголовок                                                             > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-game/ - описание                                                              > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-game/ - длительность                                                          > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-game/ - формат                                                                > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro/ - заголовок                                                         > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro/ - описание                                                          > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro/ - длительность                                                      > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro/ - формат                                                            > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer/ - заголовок                                                  > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer/ - описание                                                   > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer/ - длительность                                               > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer/ - формат                                                     > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting - заголовок                                                         > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting - описание                                                          > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting - длительность                                                      > PASS
+2025-02-07 22:53:37 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting - формат                                                            > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-lead/ - заголовок                                                             > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-lead/ - описание                                                              > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-lead/ - длительность                                                          > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-lead/ - формат                                                                > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer/ - заголовок                                                         > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer/ - описание                                                          > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer/ - длительность                                                      > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer/ - формат                                                            > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs/ - заголовок                                                                > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs/ - описание                                                                 > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs/ - длительность                                                             > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs/ - формат                                                                   > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya/ - заголовок                                    > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya/ - описание                                     > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya/ - длительность                                 > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya/ - формат                                       > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa/ - заголовок                                                              > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa/ - описание                                                               > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa/ - длительность                                                           > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa/ - формат                                                                 > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization/ - заголовок                                         > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization/ - описание                                          > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization/ - длительность                                      > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization/ - формат                                            > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic/ - заголовок                                                       > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic/ - описание                                                        > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic/ - длительность                                                    > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic/ - формат                                                          > PASS
+2025-02-07 22:56:02 ERROR Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-game/ - элемент не найден по локатору                                         > FAIL
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro/ - заголовок                                                         > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro/ - описание                                                          > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro/ - длительность                                                      > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro/ - формат                                                            > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer/ - заголовок                                                  > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer/ - описание                                                   > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer/ - длительность                                               > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer/ - формат                                                     > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting - заголовок                                                         > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting - описание                                                          > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting - длительность                                                      > PASS
+2025-02-07 22:56:02 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting - формат                                                            > PASS
+2025-02-07 22:57:33 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer заголовок                                                     > PASS
+2025-02-07 22:57:34 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer описание                                                      > PASS
+2025-02-07 22:57:34 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer длительность                                                  > PASS
+2025-02-07 22:57:34 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/kotlin-qa-engineer формат                                                        > PASS
+2025-02-07 22:57:40 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya заголовок                                       > PASS
+2025-02-07 22:57:40 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya описание                                        > PASS
+2025-02-07 22:57:40 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya длительность                                    > PASS
+2025-02-07 22:57:40 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/avtomatizaciya-web-testirovaniya формат                                          > PASS
+2025-02-07 22:57:43 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting заголовок                                                           > PASS
+2025-02-07 22:57:43 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting описание                                                            > PASS
+2025-02-07 22:57:43 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting длительность                                                        > PASS
+2025-02-07 22:57:43 INFO  Courses_Test    - [chrome]          -> https://otus.ru/online/manualtesting формат                                                              > PASS
+2025-02-07 22:58:26 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic заголовок                                                          > PASS
+2025-02-07 22:58:26 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic описание                                                           > PASS
+2025-02-07 22:58:26 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic длительность                                                       > PASS
+2025-02-07 22:58:26 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-basic формат                                                             > PASS
+2025-02-07 22:58:35 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-lead заголовок                                                                > PASS
+2025-02-07 22:58:35 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-lead описание                                                                 > PASS
+2025-02-07 22:58:35 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-lead длительность                                                             > PASS
+2025-02-07 22:58:35 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-lead формат                                                                   > PASS
+2025-02-07 22:58:39 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro заголовок                                                            > PASS
+2025-02-07 22:58:39 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro описание                                                             > PASS
+2025-02-07 22:58:39 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro длительность                                                         > PASS
+2025-02-07 22:58:39 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/java-qa-pro формат                                                               > PASS
+2025-02-07 22:58:43 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization заголовок                                            > PASS
+2025-02-07 22:58:43 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization описание                                             > PASS
+2025-02-07 22:58:43 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization длительность                                         > PASS
+2025-02-07 22:58:43 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-auto-java-specialization формат                                               > PASS
+2025-02-07 22:58:50 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-game заголовок                                                                > PASS
+2025-02-07 22:58:50 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-game описание                                                                 > PASS
+2025-02-07 22:58:50 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-game длительность                                                             > PASS
+2025-02-07 22:58:50 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-game формат                                                                   > PASS
+2025-02-07 22:58:55 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs заголовок                                                                   > PASS
+2025-02-07 22:58:55 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs описание                                                                    > PASS
+2025-02-07 22:58:55 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs длительность                                                                > PASS
+2025-02-07 22:58:55 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qajs формат                                                                      > PASS
+2025-02-07 22:58:59 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer заголовок                                                            > PASS
+2025-02-07 22:58:59 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer описание                                                             > PASS
+2025-02-07 22:58:59 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer длительность                                                         > PASS
+2025-02-07 22:58:59 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/qa-engineer формат                                                               > PASS
+2025-02-07 22:59:06 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa заголовок                                                                 > PASS
+2025-02-07 22:59:06 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa описание                                                                  > PASS
+2025-02-07 22:59:06 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa длительность                                                              > PASS
+2025-02-07 22:59:07 INFO  Courses_Test    - [chrome]          -> https://otus.ru/lessons/loadqa формат                                                                    > PASS
