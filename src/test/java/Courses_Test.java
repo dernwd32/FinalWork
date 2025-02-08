@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 import pages.CoursesRootPage;
 import webdriver.WebDriverFactory;
 
@@ -17,21 +18,21 @@ public class Courses_Test {
     private WebDriver driver;
     private final WebDriverFactory webDriverFactory = new WebDriverFactory();
     private AssertWithLog assertWithLog = null;
-    private CoursesRootPage coursesRootPage = null;
+    private CoursesRootPage coursesPage = null;
 
     List tmp = List.of("1", "2");
 
     @BeforeEach
     void beforeEach() {
-        String webDriverName = System.getProperty("browser", "chrome").toLowerCase();
+        String webDriverName = System.getProperty("browser", "firefox").toLowerCase();
         driver = webDriverFactory.create(webDriverName, "maximize");
         assertWithLog = new AssertWithLog(driver, logger);
 
-        coursesRootPage = new CoursesRootPage(driver);
-        coursesRootPage.openPage();
-        coursesRootPage.killFilthyPopups();
-        coursesRootPage.chooseCoursesType();
-        coursesRootPage.getCoursesCardsListComponent().getSearchLoader();
+        coursesPage = PageFactory.initElements(driver, CoursesRootPage.class);
+        coursesPage.openPage();
+        coursesPage.killFilthyPopups();
+        coursesPage.chooseCoursesType();
+        coursesPage.getCoursesCardsListComponent().getSearchLoader();
 
     }
 
@@ -40,8 +41,8 @@ public class Courses_Test {
     public void testCoursesList() {
 
 
-        int counter = coursesRootPage.countCardsInList();
-        coursesRootPage.hrefsOfCardsInList();
+        int counter = coursesPage.countCardsInList();
+        coursesPage.hrefsOfCardsInList();
         assertWithLog.assertWithLog(counter == 10, "курсов на странице = " + counter);
     }
 
@@ -49,16 +50,14 @@ public class Courses_Test {
     @DisplayName("Проверка содержимого карточек курсов (прокликивая)")
     public void testCoursesCard2() {
 
-        coursesRootPage.getCoursesCardsListComponent().clickShowMoreWhileUCan();
-        //SoftAssertions softly = new SoftAssertions();
+        coursesPage.getCoursesCardsListComponent().clickShowMoreWhileUCan();
+
         assertAll(
                 () ->
-                        coursesRootPage.openLinksInNewTabAndCollectTexts().forEach((checkTitle, checkContent) ->
+                        coursesPage.openLinksInNewTabAndCollectTexts().forEach((checkTitle, checkContent) ->
                                 assertWithLog.assertWithLog(checkContent.length() > 1, checkTitle) )
         );
 
-        //assertThat(coursesRootPage.openLinksInNewTabAndCollectTexts()).;
-        //softly.assertAll();
     }
 
     @Test
@@ -67,13 +66,13 @@ public class Courses_Test {
        // courseCardPage = new CourseCardPage(driver);
 
 
-        coursesRootPage.getCoursesCardsListComponent().clickShowMoreWhileUCan();
+        coursesPage.getCoursesCardsListComponent().clickShowMoreWhileUCan();
          /*
         Так развернем список полностью...
         ...но там дальше курс в старой вёрстке...
         ...можно сделать ещё один класс для старой страницы, и применить тут ооп как раз (с) Картушин
         */
-        coursesRootPage.hrefsOfCardsInList().forEach(
+        coursesPage.hrefsOfCardsInList().forEach(
                 thisCard -> {
                     driver.get(thisCard);
 

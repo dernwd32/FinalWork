@@ -4,8 +4,10 @@ import components.courses.*;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import javax.swing.*;
 import java.util.*;
 
 public class CoursesRootPage extends AbstractPage{
@@ -71,7 +73,12 @@ public class CoursesRootPage extends AbstractPage{
         for (WebElement thisCard : cardsInList()) {
 
             // System.out.println(++i + ": \n" + thisCard.getText());
-            thisCard.sendKeys(Keys.CONTROL, Keys.RETURN);
+            //thisCard.sendKeys(Keys.CONTROL, Keys.RETURN);
+            new Actions(driver)
+                    .moveToElement(thisCard)
+                    .keyDown(Keys.CONTROL)
+                    .click()
+                    .perform();
             standartWaiter.waitForCondition(ExpectedConditions.numberOfWindowsToBe(2));
 
             ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
