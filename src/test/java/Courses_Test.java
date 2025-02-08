@@ -32,7 +32,7 @@ public class Courses_Test {
         coursesPage.openPage();
         coursesPage.killFilthyPopups();
         coursesPage.chooseCoursesType();
-        coursesPage.getCoursesCardsListComponent().getSearchLoader();
+        coursesPage.getCardsList().getSearchLoader();
 
     }
 
@@ -50,7 +50,7 @@ public class Courses_Test {
     @DisplayName("Проверка содержимого карточек курсов (прокликивая)")
     public void testCoursesCard2() {
 
-        coursesPage.getCoursesCardsListComponent().clickShowMoreWhileUCan();
+        coursesPage.getCardsList().clickShowMoreWhileUCan();
 
         assertAll(
                 () ->
@@ -66,40 +66,28 @@ public class Courses_Test {
        // courseCardPage = new CourseCardPage(driver);
 
 
-        coursesPage.getCoursesCardsListComponent().clickShowMoreWhileUCan();
-         /*
-        Так развернем список полностью...
-        ...но там дальше курс в старой вёрстке...
-        ...можно сделать ещё один класс для старой страницы, и применить тут ооп как раз (с) Картушин
-        */
+        coursesPage.getCardsList().clickShowMoreWhileUCan();
+
         coursesPage.hrefsOfCardsInList().forEach(
                 thisCard -> {
                     driver.get(thisCard);
 
-                    CourseCardHeaderComponent courseCardHeaderComponent = new CourseCardHeaderComponent(driver);
+                    CourseCardHeaderComponent cardHeader = new CourseCardHeaderComponent(driver);
 
                     assertWithLog.assertWithLog(
-                            courseCardHeaderComponent.isntEmpty(
-                                    courseCardHeaderComponent
-                                            .getTitle()),
+                            cardHeader.getTitle().getText().length() > 1,
                             thisCard + " заголовок"
                     );
                     assertWithLog.assertWithLog(
-                            courseCardHeaderComponent.isntEmpty(
-                                    courseCardHeaderComponent
-                                            .getDescr()),
+                            cardHeader.getDescr().getText().length() > 1,
                             thisCard + " описание"
                     );
                     assertWithLog.assertWithLog(
-                            courseCardHeaderComponent.isntEmpty(
-                                    courseCardHeaderComponent
-                                            .getDuration()),
+                            cardHeader.getDuration().getText().length() > 1,
                             thisCard + " длительность"
                     );
                     assertWithLog.assertWithLog(
-                            courseCardHeaderComponent.isntEmpty(
-                                    courseCardHeaderComponent
-                                            .getFormat()),
+                            cardHeader.getFormat().getText().length() > 1,
                             thisCard + " формат"
                     );
 

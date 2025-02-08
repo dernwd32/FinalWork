@@ -21,6 +21,7 @@ public class CourseCardHeaderComponent  extends AbstractComponent {
     private String subHeaderInfoBlockRoot = ".//div[contains(@class,'galmep')]";
     private String svgDurationD = "M17.1604 2.76862L17.1614";
     private String svgFormatD = "M3.90039 10.3178C3.90039";
+
     private String newTitle = ".//h1";
     private String oldTitle = "(.//h3)[1]";
     private String newDescr = ".//h1//following::p[1]";
@@ -52,11 +53,5 @@ public class CourseCardHeaderComponent  extends AbstractComponent {
     public WebElement getFormat() {
         standartWaiter.waitForElementLocatedAndVisible(formatXPath);
         return getRootElement().findElement(formatXPath);    }
-
-
-
-    public boolean isntEmpty(WebElement element) {
-        return !element.getText().isEmpty();
-    }
 
 }

@@ -13,7 +13,6 @@ import java.util.Locale;
 public class EventsPage extends AbstractPage{
     String pageUrl = BASE_URL + "/events/";
 
-
     public EventsPage(WebDriver driver) {
         super(driver);
     }

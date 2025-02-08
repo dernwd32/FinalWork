@@ -7,7 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import javax.swing.*;
 import java.util.*;
 
 public class CoursesRootPage extends AbstractPage{
@@ -22,33 +21,29 @@ public class CoursesRootPage extends AbstractPage{
          driver.get(pageUrl);
     }
 
-    private CoursesTypesMenuComponent coursesTypesMenuComponent = new CoursesTypesMenuComponent(driver);
-    private CoursesCardsListComponent coursesCardsListComponent = new CoursesCardsListComponent(driver);
+    private CoursesTypesMenuComponent typesMenu = new CoursesTypesMenuComponent(driver);
+    private CoursesCardsListComponent cardsList = new CoursesCardsListComponent(driver);
 
 
 
-    public CoursesCardsListComponent getCoursesCardsListComponent() {
-        return coursesCardsListComponent;
+    public CoursesCardsListComponent getCardsList() {
+        return cardsList;
+    }
+    public CoursesTypesMenuComponent getTypesMenu() {
+        return typesMenu;
     }
 
-    public CoursesTypesMenuComponent getCoursesTypesMenuComponent() {
-        return coursesTypesMenuComponent;
-    }
 
-
-/**
-логика далее
- */
     public void chooseCoursesType() {
-        coursesTypesMenuComponent.getLabelTesting().click();
+        typesMenu.getLabelTesting().click();
     }
     public void clickHideMoreTypes(){
-        coursesTypesMenuComponent.getSpanHide().click();
+        typesMenu.getSpanHide().click();
     }
 
     public List<WebElement> cardsInList() {
-           // System.out.println(coursesCardsListComponent.getCardsInList().size());
-            return coursesCardsListComponent.getCardsInList();
+           // System.out.println(cardsList.getCardsInList().size());
+            return cardsList.getCardsInList();
     }
 
     public Set<String> hrefsOfCardsInList() {
@@ -69,6 +64,7 @@ public class CoursesRootPage extends AbstractPage{
     public LinkedHashMap<String, String> openLinksInNewTabAndCollectTexts() {
 
         LinkedHashMap<String, String> textsInCard = new LinkedHashMap<>();
+        CourseCardHeaderComponent cardHeader = new CourseCardHeaderComponent(driver);
 
         for (WebElement thisCard : cardsInList()) {
 
@@ -84,42 +80,40 @@ public class CoursesRootPage extends AbstractPage{
             ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
             driver.switchTo().window(tabs.getLast());
 
-
-            CourseCardHeaderComponent courseCardHeaderComponent = new CourseCardHeaderComponent(driver);
-
             if (standartWaiter.waitForElementLocatedAndVisible(
-                    courseCardHeaderComponent.getFormatXPath(),
-                    courseCardHeaderComponent.getDescrXPath(),
-                    courseCardHeaderComponent.getTitleXPath(),
-                    courseCardHeaderComponent.getDurationXPath()
+                    cardHeader.getFormatXPath(),
+                    cardHeader.getDescrXPath(),
+                    cardHeader.getTitleXPath(),
+                    cardHeader.getDurationXPath()
             )) {
 
                 System.out.println(
-                        courseCardHeaderComponent.getTitle().getText() + " \n"
-                                + courseCardHeaderComponent.getDescr().getText() + " \n"
-                                + courseCardHeaderComponent.getDuration().getText() + " \n"
-                                + courseCardHeaderComponent.getFormat().getText());
+                        cardHeader.getTitle().getText() + " \n"
+                        + cardHeader.getDescr().getText() + " \n"
+                        + cardHeader.getDuration().getText() + " \n"
+                        + cardHeader.getFormat().getText());
 
                 textsInCard.put(
                         driver.getCurrentUrl() + " - заголовок",
-                        courseCardHeaderComponent.getTitle().getText()
+                        cardHeader.getTitle().getText()
                 );
                 textsInCard.put(
                         driver.getCurrentUrl() + " - описание",
-                        courseCardHeaderComponent.getDescr().getText()
+                        cardHeader.getDescr().getText()
                 );
                 textsInCard.put(
                         driver.getCurrentUrl() + " - длительность",
-                        courseCardHeaderComponent.getDuration().getText()
+                        cardHeader.getDuration().getText()
                 );
                 textsInCard.put(
                         driver.getCurrentUrl() + " - формат",
-                        courseCardHeaderComponent.getFormat().getText()
+                        cardHeader.getFormat().getText()
                 );
-            } else textsInCard.put(driver.getCurrentUrl() + " - элемент не найден по локатору", "");
+            }
+            else textsInCard.put(driver.getCurrentUrl() + " - элемент не найден по локатору", "");
 
 
-            driver.close(); //закрывает текущее окно
+            driver.close(); //закрывает текущее окно/вкладку
             standartWaiter.waitForCondition(ExpectedConditions.numberOfWindowsToBe(1));
             driver.switchTo().window(tabs.getFirst());
         }
