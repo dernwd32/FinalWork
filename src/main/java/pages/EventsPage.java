@@ -11,16 +11,12 @@ import java.util.List;
 import java.util.Locale;
 
 public class EventsPage extends AbstractPage{
-    String pageUrl = BASE_URL + "/events/";
 
     public EventsPage(WebDriver driver) {
         super(driver);
+        setPageUrl("/events/");
     }
 
-    @Override
-    public void openPage() {
-        driver.get(pageUrl);
-    }
 
     EventsListComponent eventsListComponent = new EventsListComponent(driver);
 

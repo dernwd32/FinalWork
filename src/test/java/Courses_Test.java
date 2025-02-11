@@ -39,8 +39,6 @@ public class Courses_Test {
     @Test
     @DisplayName("Проверка количества курсов в разделе «Тестирование»")
     public void testCoursesList() {
-
-
         int counter = coursesPage.countCardsInList();
         coursesPage.hrefsOfCardsInList();
         assertWithLog.assertWithLog(counter == 10, "курсов на странице = " + counter);

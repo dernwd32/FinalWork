@@ -1,46 +1,26 @@
 package pages;
 
-import annotations.ComponentBlueprint;
-import com.github.javafaker.Faker;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
+import common.AbstractCommon;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import waiters.StandartWaiter;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 
-public abstract class AbstractPage {
+public abstract class AbstractPage extends AbstractCommon {
     protected static final String BASE_URL = System.getProperty("base.url");
+    protected String pageUrl;
 
-    abstract void openPage();
-
-    protected WebDriver driver = null;
-    protected StandartWaiter standartWaiter = null;
-
+    public void setPageUrl(String pageUrl) {
+        this.pageUrl = pageUrl;
+    }
 
 
     protected AbstractPage(WebDriver driver){
-        this.driver = driver;
-        standartWaiter = new StandartWaiter(driver);
+        super(driver);
     }
 
-    public void killFilthyPopups(){
-        final By bannerCloseBtnClass = By.className("js-sticky-banner-close");
-        final By cookieCloseBtnXPath = By.xpath("//a[contains(@href, '/legal/cookie')]//following::button[1]");
 
-        ArrayList<WebElement> popups = new ArrayList<>();
-        if (standartWaiter.waitForElementLocatedAndVisible(bannerCloseBtnClass))
-           popups.add(driver.findElement(bannerCloseBtnClass));
-        if (standartWaiter.waitForElementLocatedAndVisible(cookieCloseBtnXPath))
-           popups.add(driver.findElement(cookieCloseBtnXPath));
-
-        popups.forEach(element -> {
-            if (standartWaiter.waitToBeClickable(element))
-                ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
-        });
-
+    public void openPage() {
+        driver.get(BASE_URL + pageUrl);
     }
+
 }

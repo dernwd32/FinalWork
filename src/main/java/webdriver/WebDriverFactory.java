@@ -46,9 +46,9 @@ public class WebDriverFactory implements IWebDriver{
                 if (argsWasSet) options.addArguments(mode);
                 driver = new EdgeDriver(options);
             }
-            default -> {
+            default ->
                throw new RuntimeException(String.format("Browser <%s> is not supported by the factory", webDriverName));
-            }
+
 
         }
 

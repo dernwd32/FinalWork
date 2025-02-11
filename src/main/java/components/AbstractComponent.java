@@ -1,21 +1,18 @@
 package components;
 
 import annotations.ComponentBlueprint;
+import common.AbstractCommon;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import waiters.StandartWaiter;
 
 
-public abstract class AbstractComponent {
-    protected WebDriver driver = null;
-    protected StandartWaiter standartWaiter = null;
+public abstract class AbstractComponent extends AbstractCommon {
     protected By rootLocator = (By) getMetaValues("rootLocator");
 
-
     public AbstractComponent(WebDriver driver){
-        this.driver = driver;
-        standartWaiter = new StandartWaiter(driver);
+        super(driver);
     }
 
     public WebElement getRootElement() {

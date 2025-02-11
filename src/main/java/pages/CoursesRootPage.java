@@ -10,16 +10,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import java.util.*;
 
 public class CoursesRootPage extends AbstractPage{
-    String pageUrl = BASE_URL + "/catalog/courses";
+
 
     public CoursesRootPage(WebDriver driver) {
         super(driver);
+        setPageUrl("/catalog/courses");
     }
 
-    @Override
-    public void openPage() {
-         driver.get(pageUrl);
-    }
 
     private CoursesTypesMenuComponent typesMenu = new CoursesTypesMenuComponent(driver);
     private CoursesCardsListComponent cardsList = new CoursesCardsListComponent(driver);

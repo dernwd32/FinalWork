@@ -13,10 +13,6 @@ public class CourseCardPage extends AbstractPage{
         super(driver);
     }
 
-    @Override
-    public void openPage() { //сюда параметр конкретной карточки докинуть?
-       // driver.get(pageUrl);
-    }
 
 
 
