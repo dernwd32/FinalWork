@@ -7,8 +7,8 @@ import org.openqa.selenium.WebElement;
 //@ComponentBlueprint( rootLocator = "//p[contains(text(),'Направление')]/following::div[@class='ReactCollapse--content'][1]" )
 
 @ComponentBlueprint( rootLocator = "//div[@class='ReactCollapse--collapse']//input[@type='checkbox']//ancestor::div[6]")
-public class TypesMenuComponent extends AbstractComponent {
-    public TypesMenuComponent(WebDriver driver) {
+public class FilterMenuComponent extends AbstractComponent {
+    public FilterMenuComponent(WebDriver driver) {
         super(driver);
     }
 
@@ -17,8 +17,6 @@ public class TypesMenuComponent extends AbstractComponent {
 
     private final String filterTitleXPath = ".//p[text()='%s']";
     private final String filterItemXPath = ".//following::label[text()='%s']";
-
-
 
     public WebElement getFilterTitle(String title) {
         return  getRootElement()
