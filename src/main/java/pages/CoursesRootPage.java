@@ -1,5 +1,6 @@
 package pages;
 
+import components.TypesMenuComponent;
 import components.courses.*;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -18,7 +19,7 @@ public class CoursesRootPage extends AbstractPage{
     }
 
 
-    private CoursesTypesMenuComponent typesMenu = new CoursesTypesMenuComponent(driver);
+    private TypesMenuComponent typesMenu = new TypesMenuComponent(driver);
     private CoursesCardsListComponent cardsList = new CoursesCardsListComponent(driver);
 
 
@@ -26,14 +27,16 @@ public class CoursesRootPage extends AbstractPage{
     public CoursesCardsListComponent getCardsList() {
         return cardsList;
     }
-    public CoursesTypesMenuComponent getTypesMenu() {
+    public TypesMenuComponent getTypesMenu() {
         return typesMenu;
     }
 
 
-    public void chooseCoursesType() {
-        typesMenu.getLabelTesting().click();
+    public void chooseFilterCheckboxByTitleAndValue(String title, String item) {
+        typesMenu.getFilterItemXPath(title, item).click();
     }
+
+
     public void clickHideMoreTypes(){
         typesMenu.getSpanHide().click();
     }

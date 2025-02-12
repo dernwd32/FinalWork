@@ -31,7 +31,7 @@ public class Courses_Test {
         coursesPage = PageFactory.initElements(driver, CoursesRootPage.class);
         coursesPage.openPage();
         coursesPage.killFilthyPopups();
-        coursesPage.chooseCoursesType();
+        coursesPage.chooseFilterCheckboxByTitleAndValue("Направление", "Тестирование");
         coursesPage.getCardsList().getSearchLoader();
 
     }
