@@ -4,7 +4,7 @@ import annotations.ComponentBlueprint;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-//@ComponentBlueprint( rootLocator = "//p[contains(text(),'Направление')]/following::div[@class='ReactCollapse--content'][1]" )
+//@ComponentBlueprint( rootLocatorBy = "//p[contains(text(),'Направление')]/following::div[@class='ReactCollapse--content'][1]" )
 
 @ComponentBlueprint( rootLocator = "//div[@class='ReactCollapse--collapse']//input[@type='checkbox']//ancestor::div[6]")
 public class FilterMenuComponent extends AbstractComponent {

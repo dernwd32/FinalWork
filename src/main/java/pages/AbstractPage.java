@@ -13,14 +13,13 @@ public abstract class AbstractPage extends AbstractCommon {
         this.pageUrl = pageUrl;
     }
 
-
     protected AbstractPage(WebDriver driver){
         super(driver);
     }
 
-
-    public void openPage() {
+    public AbstractPage openPage() {
         driver.get(BASE_URL + pageUrl);
+        return this;
     }
 
 }

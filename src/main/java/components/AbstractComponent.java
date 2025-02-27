@@ -5,19 +5,30 @@ import common.AbstractCommon;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import waiters.StandartWaiter;
+
 
 
 public abstract class AbstractComponent extends AbstractCommon {
-    protected By rootLocator = (By) getMetaValues("rootLocator");
+    protected By rootLocatorBy = (By) getMetaValues("rootLocatorBy");
+    protected String rootLocatorString = (String) getMetaValues("rootLocatorString");
 
-    public AbstractComponent(WebDriver driver){
+    protected AbstractComponent(WebDriver driver){
         super(driver);
     }
 
+    public String getRootLocatorString() {
+        return rootLocatorString;
+    }
+    public By getRootLocatorBy() {
+        return rootLocatorBy;
+    }
+
+
+
+
     public WebElement getRootElement() {
-        standartWaiter.waitForElementLocatedAndVisible(rootLocator);
-        return driver.findElement(rootLocator);
+        standartWaiter.waitForElementLocatedAndVisible(rootLocatorBy);
+        return driver.findElement(rootLocatorBy);
     }
 
     public By getByFromString(String someLocator) {
@@ -51,10 +62,11 @@ public abstract class AbstractComponent extends AbstractCommon {
         if(clazz.isAnnotationPresent(ComponentBlueprint.class)) {
             ComponentBlueprint componentBlueprint = (ComponentBlueprint) clazz.getDeclaredAnnotation(ComponentBlueprint.class);
             switch (metaName){
-                case "rootLocator" -> {
-                    //standartWaiter.waitForElementVisible(driver.findElement(By.xpath(componentBlueprint.rootLocator())));
-                    //return By.xpath(componentBlueprint.rootLocator());
+                case "rootLocatorBy" -> {
                     return getByFromString(componentBlueprint.rootLocator());
+                }
+                case "rootLocatorString" -> {
+                    return componentBlueprint.rootLocator();
                 }
             }
         }

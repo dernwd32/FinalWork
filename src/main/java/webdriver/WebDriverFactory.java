@@ -25,7 +25,7 @@ public class WebDriverFactory implements IWebDriver{
 
         boolean argsWasSet = (!mode.isEmpty() && mode.charAt(0) == '-');
 
-        switch (webDriverName) {
+        switch (webDriverName.toLowerCase().trim()) {
 
             case "firefox" -> {
                 WebDriverManager.firefoxdriver().setup();

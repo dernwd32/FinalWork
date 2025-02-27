@@ -21,7 +21,7 @@ class Events_Test {
 
     @BeforeEach
     void beforeEach() {
-        String webDriverName = System.getProperty("browser", "firefox").toLowerCase();
+        String webDriverName = System.getProperty("browser", "firefox");
         driver = webDriverFactory.create(webDriverName, "maximize");
         assertWithLog = new AssertWithLog(driver, logger);
         eventsPage = PageFactory.initElements(driver, EventsPage.class);
@@ -40,15 +40,18 @@ class Events_Test {
     @Test
     @DisplayName("Просмотр мероприятий по типу:")
     void testEventsTypes() {
-        eventsPage.chooseEventFilter("Открытый вебинар");
-        eventsPage.scrollToShowFullEventsList();
-        assertWithLog.assertWithLog(eventsPage.checkTitlesOfEventCards("Открытый вебинар"), "заголовки карточек соответствуют фильтру");
+        eventsPage
+                .chooseEventFilter("Открытый вебинар")
+                .scrollToShowFullEventsList();
+        assertWithLog.assertWithLog(
+                eventsPage.checkTypesOfEvents("Открытый вебинар"),
+                "типы карточек соответствуют фильтру");
     }
 
 
     @AfterEach
     void tearDown() {
-        if (driver != null) driver.close();
+        if (driver != null) driver.quit();
     }
 
 }

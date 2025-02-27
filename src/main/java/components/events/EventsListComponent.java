@@ -18,8 +18,6 @@ public class EventsListComponent extends AbstractComponent {
     private final By eventTypesDropdownClass = By.xpath("(.//span[contains(@class,'dod_new-events-dropdown__input')])[1]");
     private final By chooseEventFilterClass = By.xpath("(.//div[contains(@class,'dod_new-events-dropdown__list')])[1]//a");
     private final By loaderClass = By.className("dod_new-loader-wrapper");
-    private final By loaderVisibleClass = By.className("dod_new-loader-wrapper_visible");
-    private final By divEventCardClass = By.className("dod_new-event-content");
     private final By spanEventDateXPath = By.xpath(".//span[@class='dod_new-event__icon dod_new-event__calendar-icon']//following::span[1]");
     private final By eventCardTitlesClass = By.className("dod_new-type__text");
 

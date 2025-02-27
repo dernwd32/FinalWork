@@ -5,6 +5,7 @@ import components.AbstractComponent;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import pages.CoursesRootPage;
 
 import java.util.List;
 
@@ -23,6 +24,7 @@ public class CoursesCardsListComponent extends AbstractComponent {
         return getRootElement().findElements(cardsInListXPath);
     }
     public boolean getSearchLoader() {
+        //ожидание загрузки элементов каталога через лоадер внутри поиска
         return standartWaiter.waitForElementNotVisible(
                 getRootElement().findElement(searchLoader)
         );
@@ -34,10 +36,11 @@ public class CoursesCardsListComponent extends AbstractComponent {
         else return null;
     }
 
-    public void clickShowMoreWhileUCan(){
+    public CoursesRootPage clickShowMoreWhileUCan(){
         while (standartWaiter.waitToBeClickable(getShowMoreBtn())) {
             getShowMoreBtn().click();
         }
+        return new CoursesRootPage(driver);
     }
 
 }

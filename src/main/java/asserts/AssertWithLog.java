@@ -4,6 +4,9 @@ import org.apache.logging.log4j.Logger;
 import org.assertj.core.api.SoftAssertions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
+
+import java.util.Objects;
+
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
@@ -39,11 +42,16 @@ public class AssertWithLog {
     // Работает с конструктором AssertWithLog(WebDriver driver, ILog ILog)
     public void assertWithLog(boolean condition, String message) {
 
+       //если не указан браузер в контексте, получаем его имя через capabilities
+       String currentBrowser = Objects.isNull(System.getProperty("browser"))
+                            ? ((RemoteWebDriver) driver).getCapabilities().getBrowserName()
+                            : System.getProperty("browser");
+
         assertWithLog(
                 condition,
                 message,
                 logger,
-                ((RemoteWebDriver) driver).getCapabilities().getBrowserName()
+                currentBrowser
         );
 
     }

@@ -20,17 +20,16 @@ public class EventsPage extends AbstractPage{
 
     EventsListComponent eventsListComponent = new EventsListComponent(driver);
 
-    public void scrollToShowFullEventsList() {
-        //int i=0;
+    public EventsPage scrollToShowFullEventsList() {
         do {
             standartWaiter.waitForElementNotVisible(eventsListComponent.getLoader());
-            //System.out.println(++i);
-
             new Actions(driver)
                 .sendKeys(Keys.END)
                 .perform();
         }
         while (standartWaiter.waitForElementVisible(eventsListComponent.getLoader()));
+
+        return this;
     }
     public String convertDateToString (LocalDate localDate, String pattern) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern);
@@ -60,7 +59,7 @@ public class EventsPage extends AbstractPage{
         return checker;
     }
 
-    public void chooseEventFilter(String value){
+    public EventsPage chooseEventFilter(String value){
         eventsListComponent.getEventTypesDropdown().click();
 
         for (WebElement thisFilter : eventsListComponent.getChooseEventFilter()) {
@@ -70,9 +69,10 @@ public class EventsPage extends AbstractPage{
                 break;
             }
         }
+        return this;
     }
 
-    public boolean checkTitlesOfEventCards(String pattern){
+    public boolean checkTypesOfEvents(String pattern){
         List<WebElement> titles = eventsListComponent.getEventCardTitles();
 
         for (WebElement thisTitle : titles)
