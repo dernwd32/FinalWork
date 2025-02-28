@@ -12,10 +12,10 @@ public class CourseCardHeaderComponent extends AbstractCourseCardHeaderComponent
     public CourseCardHeaderComponent(WebDriver driver) {
         super(driver);
         //передаем значения полей наследника в поля абстрактного класса для методов, реализованных в абстрактном классе
-        setTitleStrLoc(titleStrLoc);
-        setDescrStrLoc(descrStrLoc);
-        setDurationStrLoc(durationStrLoc);
-        setFormatStrLoc(formatStrLoc);
+        setTitleStrLoc(getRootLocatorString() + cutRelativePoints(titleStr));
+        setDescrStrLoc(getRootLocatorString() + cutRelativePoints(descrStr));
+        setDurationStrLoc(getRootLocatorString() + cutRelativePoints(durationStr));
+        setFormatStrLoc(getRootLocatorString() + cutRelativePoints(formatStr));
     }
 
     private String subHeaderInfoBlockRoot = ".//div[contains(@class,'galmep')]";
@@ -26,15 +26,6 @@ public class CourseCardHeaderComponent extends AbstractCourseCardHeaderComponent
     private String descrStr = ".//h1//following::p[1]";
     private String durationStr = subHeaderInfoBlockRoot + "//*[local-name()='path' and contains(@d, '" + svgDurationD + "')]//following::p[1]";
     private String formatStr = subHeaderInfoBlockRoot + "//*[local-name()='path'  and contains(@d, '" + svgFormatD + "')]//following::p[1]";
-
-    private final String titleStrLoc = getRootLocatorString() + cutRelativePoints(titleStr);
-    private final String descrStrLoc = getRootLocatorString() + cutRelativePoints(descrStr) ;
-    private final String durationStrLoc = getRootLocatorString() + cutRelativePoints(durationStr) ;
-    private final String formatStrLoc = getRootLocatorString() + cutRelativePoints(formatStr);
-
-
-
-
 
 
 }

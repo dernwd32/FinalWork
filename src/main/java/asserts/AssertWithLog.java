@@ -12,16 +12,21 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class AssertWithLog {
     private WebDriver driver = null;
-    private org.apache.logging.log4j.Logger logger = null;
+    private Logger logger = null;
+    private SoftAssertions softly = null;
 
     //конструктор с передачей текущего драйвера и логгера
-    public AssertWithLog(WebDriver driver, org.apache.logging.log4j.Logger logger) {
+    public AssertWithLog(WebDriver driver, Logger logger) {
         this.driver = driver;
         this.logger = logger;
     }
 
-    //дефолтный конструктор
-    public AssertWithLog(){}
+    //конструктор с передачей softly для корректной обработки заранее неизвестного кол-ва софтассёртов (в цикле)
+    public AssertWithLog(SoftAssertions softly, WebDriver driver, Logger logger) {
+        this.driver = driver;
+        this.logger = logger;
+        this.softly = softly;
+    }
 
     // Метод принимающий только условие, автоматически вычисляющий всё остальное.
     // Работает с конструктором AssertWithLog(WebDriver driver, ILog ILog)
@@ -47,19 +52,6 @@ public class AssertWithLog {
                             ? ((RemoteWebDriver) driver).getCapabilities().getBrowserName()
                             : System.getProperty("browser");
 
-        assertWithLog(
-                condition,
-                message,
-                logger,
-                currentBrowser
-        );
-
-    }
-
-    // основной перегруженный метод
-    // работает с дефолтным конструктором
-    public void assertWithLog(boolean condition, String message, Logger logger, String currentBrowser) {
-
         message = String.format("%-125s",
                         String.format("%-18s", "[" + currentBrowser + "]")
                         + "-> "
@@ -73,8 +65,11 @@ public class AssertWithLog {
         else logger.error(messageFail);
 
 
-      //  assertTrue(condition);
-        SoftAssertions softly = new SoftAssertions();
-        softly.assertThat(condition).isTrue();
+        if (!Objects.isNull(softly))
+            softly.assertThat(condition).as(message).isTrue();
+        else
+            assertTrue(condition, message);
     }
+
+
 }

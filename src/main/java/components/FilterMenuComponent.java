@@ -12,9 +12,6 @@ public class FilterMenuComponent extends AbstractComponent {
         super(driver);
     }
 
-    private final By spanHideXPath =
-            By.xpath(".//span[contains(text(),'Свернуть')]");
-
     private final String filterTitleXPath = ".//p[text()='%s']";
     private final String filterItemXPath = ".//following::label[text()='%s']";
 
@@ -33,9 +30,6 @@ public class FilterMenuComponent extends AbstractComponent {
     }
 
 
-    public WebElement getSpanHide() {
-        return getRootElement().findElement(spanHideXPath);
-    }
 
 
 }

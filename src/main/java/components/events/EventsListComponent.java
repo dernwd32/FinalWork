@@ -27,15 +27,12 @@ public class EventsListComponent extends AbstractComponent {
     public List<WebElement> getSpansWithEventDates() {
         return getRootElement().findElements(spanEventDateXPath);
     }
-
     public WebElement getEventTypesDropdown() {
         return getRootElement().findElement(eventTypesDropdownClass);
     }
-
     public List<WebElement> getChooseEventFilter() {
         return getRootElement().findElements(chooseEventFilterClass);
     }
-
     public List<WebElement> getEventCardTitles() {
         return getRootElement().findElements(eventCardTitlesClass);
     }

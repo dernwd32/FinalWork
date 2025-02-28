@@ -1,6 +1,7 @@
 import asserts.AssertWithLog;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.assertj.core.api.SoftAssertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -18,15 +19,15 @@ class Events_Test {
     private WebDriverFactory webDriverFactory = new WebDriverFactory();
     private AssertWithLog assertWithLog = null;
     private EventsPage eventsPage = null;
+    private SoftAssertions softly = new SoftAssertions();
 
     @BeforeEach
     void beforeEach() {
         String webDriverName = System.getProperty("browser", "firefox");
         driver = webDriverFactory.create(webDriverName, "maximize");
-        assertWithLog = new AssertWithLog(driver, logger);
+        assertWithLog = new AssertWithLog(softly, driver, logger);
         eventsPage = PageFactory.initElements(driver, EventsPage.class);
         eventsPage.openPage();
-
     }
 
     @Test
@@ -35,6 +36,7 @@ class Events_Test {
         eventsPage.scrollToShowFullEventsList();
         assertWithLog.assertWithLog(eventsPage.countEvents()>=1, "мероприятий в разделе: " + eventsPage.countEvents() );
         assertWithLog.assertWithLog(eventsPage.checkEventDates(), "все даты мероприятий в будущем");
+        softly.assertAll();
     }
 
     @Test
@@ -44,8 +46,9 @@ class Events_Test {
                 .chooseEventFilter("Открытый вебинар")
                 .scrollToShowFullEventsList();
         assertWithLog.assertWithLog(
-                eventsPage.checkTypesOfEvents("Открытый вебинар"),
+                eventsPage.checkTypesOfEvents("Открdытый вебинар"),
                 "типы карточек соответствуют фильтру");
+        softly.assertAll();
     }
 
 

@@ -19,12 +19,6 @@ public abstract class AbstractComponent extends AbstractCommon {
     public String getRootLocatorString() {
         return rootLocatorString;
     }
-    public By getRootLocatorBy() {
-        return rootLocatorBy;
-    }
-
-
-
 
     public WebElement getRootElement() {
         standartWaiter.waitForElementLocatedAndVisible(rootLocatorBy);
@@ -57,11 +51,11 @@ public abstract class AbstractComponent extends AbstractCommon {
 
     }
 
-    public Object getMetaValues(String metaName) {
+    public Object getMetaValues(String type) {
         Class clazz = this.getClass();
         if(clazz.isAnnotationPresent(ComponentBlueprint.class)) {
             ComponentBlueprint componentBlueprint = (ComponentBlueprint) clazz.getDeclaredAnnotation(ComponentBlueprint.class);
-            switch (metaName){
+            switch (type){
                 case "rootLocatorBy" -> {
                     return getByFromString(componentBlueprint.rootLocator());
                 }

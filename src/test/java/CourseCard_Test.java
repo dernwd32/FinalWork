@@ -10,7 +10,7 @@ import webdriver.WebDriverFactory;
 
 public class CourseCard_Test {
 
-    private static final Logger logger = LogManager.getLogger(CoursesList_Test.class);
+    private static final Logger logger = LogManager.getLogger(CourseCard_Test.class);
     private WebDriver driver;
     private final WebDriverFactory webDriverFactory = new WebDriverFactory();
     private AssertWithLog assertWithLog = null;

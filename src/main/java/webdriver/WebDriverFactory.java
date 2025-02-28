@@ -35,7 +35,7 @@ public class WebDriverFactory implements IWebDriver{
                 driver = new FirefoxDriver(options);
             }
             case "chrome" -> {
-                WebDriverManager.chromiumdriver().setup();
+                WebDriverManager.chromedriver().setup();
                 ChromeOptions options = new ChromeOptions();
                 if (argsWasSet) options.addArguments(mode);
                 driver = new ChromeDriver(options);

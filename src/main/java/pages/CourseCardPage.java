@@ -6,6 +6,7 @@ import components.courses.CourseCardHeaderComponent;
 
 import components.courses.CourseOldCardHeaderComponent;
 import org.apache.logging.log4j.Logger;
+import org.assertj.core.api.SoftAssertions;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.openqa.selenium.WebDriver;
@@ -13,11 +14,9 @@ import org.openqa.selenium.WebDriver;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 import java.util.Set;
 
 public class CourseCardPage extends AbstractPage{
-    //String pageUrl = BASE_URL + "/lessons/$1/";
 
     public CourseCardPage(WebDriver driver) {
         super(driver);
@@ -95,24 +94,17 @@ public class CourseCardPage extends AbstractPage{
     }
 
     public void assertCardsHeaders(List<CourseCardPage> courses, Logger logger) {
-        AssertWithLog assertWithLog = new AssertWithLog(driver, logger);
+
+        SoftAssertions softly = new SoftAssertions();
+        AssertWithLog assertWithLog = new AssertWithLog(softly, driver, logger);
+
         courses.forEach(thisCard -> {
-            assertWithLog.assertWithLog(
-                    thisCard.getTitle().length() > 1,
-                    thisCard.getUrl() + " заголовок"
-            );
-            assertWithLog.assertWithLog(
-                    thisCard.getDescr().length() > 1,
-                    thisCard.getUrl() + " описание"
-            );
-            assertWithLog.assertWithLog(
-                    thisCard.getDuration().length() > 1,
-                    thisCard.getUrl() + " длительность"
-            );
-            assertWithLog.assertWithLog(
-                    thisCard.getFormat().length() > 1,
-                    thisCard.getUrl() + " формат"
-            );
+            assertWithLog.assertWithLog(thisCard.getTitle().length() > 1, thisCard.getUrl() + " заголовок");
+            assertWithLog.assertWithLog(thisCard.getDescr().length() > 1, thisCard.getUrl() + " описание");
+            assertWithLog.assertWithLog(thisCard.getDuration().length() > 1, thisCard.getUrl() + " длительность");
+            assertWithLog.assertWithLog(thisCard.getFormat().length() > 1, thisCard.getUrl() + " формат");
         });
+
+        softly.assertAll();
     }
 }
