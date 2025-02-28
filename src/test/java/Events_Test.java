@@ -42,11 +42,13 @@ class Events_Test {
     @Test
     @DisplayName("Просмотр мероприятий по типу:")
     void testEventsTypes() {
+
+        String filter = "Открытый вебинар";
         eventsPage
-                .chooseEventFilter("Открытый вебинар")
+                .chooseEventFilter(filter)
                 .scrollToShowFullEventsList();
         assertWithLog.assertWithLog(
-                eventsPage.checkTypesOfEvents("Открdытый вебинар"),
+                eventsPage.checkTypesOfEvents(filter),
                 "типы карточек соответствуют фильтру");
         softly.assertAll();
     }
