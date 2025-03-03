@@ -28,7 +28,7 @@ public class CoursesRootPage extends AbstractPage{
 
 
     public CoursesRootPage chooseFilterCheckboxByTitleAndValue(String title, String item) {
-        filterMenu.getFilterItemXPath(title, item).click();
+        filterMenu.getFilterItem(title, item).click();
         return this;
     }
 

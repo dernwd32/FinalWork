@@ -22,7 +22,7 @@ public class FilterMenuComponent extends AbstractComponent {
                                 String.format(filterTitleXPath, title)));
     }
 
-    public WebElement getFilterItemXPath(String title, String item) {
+    public WebElement getFilterItem(String title, String item) {
         return getFilterTitle(title)
                 .findElement(
                         By.xpath(

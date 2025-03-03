@@ -15,7 +15,6 @@ public class CoursesCardsListComponent extends AbstractComponent {
         super(driver);
     }
 
-
     private final By cardsInListXPath = By.xpath(".//a");
     private final By showMoreBtnXPath = By.xpath(".//button[contains(text(),'Показать')]");
     private final By searchLoader = By.xpath(".//input[@type='search']//following::div[1]//div");
