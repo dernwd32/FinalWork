@@ -18,16 +18,18 @@ public class CoursesCardsListComponent extends AbstractComponent {
 
     private final By cardsInListXPath = By.xpath(".//a");
     private final By showMoreBtnXPath = By.xpath(".//button[contains(text(),'Показать')]");
-    private final By searchLoader = By.xpath(".//label[contains(text(),'Поиск')]//following::div[1]//div");
+    private final By searchLoader = By.xpath(".//input[@type='search']//following::div[1]//div");
+    private final By preloaderCard = By.xpath(".//a[not(@href)]");
 
     public List<WebElement> getCardsInList() {
         return getRootElement().findElements(cardsInListXPath);
     }
-    public boolean getSearchLoader() {
+    public CoursesRootPage getSearchLoader() {
         //ожидание загрузки элементов каталога через лоадер внутри поиска
-        return standartWaiter.waitForElementNotVisible(
+        standartWaiter.waitForElementNotVisible(
                 getRootElement().findElement(searchLoader)
         );
+        return new CoursesRootPage(driver);
     }
 
     public WebElement getShowMoreBtn() {
@@ -36,9 +38,12 @@ public class CoursesCardsListComponent extends AbstractComponent {
         else return null;
     }
 
+
     public CoursesRootPage clickShowMoreWhileUCan(){
-        while (standartWaiter.waitToBeClickable(getShowMoreBtn())) {
-            getShowMoreBtn().click();
+        while (standartWaiter.waitForElementLocatedAndVisible(showMoreBtnXPath)) {
+            if ( standartWaiter.waitToBeClickable(getShowMoreBtn())
+                    && !standartWaiter.waitForElementLocatedAndVisible(2000, preloaderCard))
+                getShowMoreBtn().click();
         }
         return new CoursesRootPage(driver);
     }

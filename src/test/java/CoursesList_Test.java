@@ -31,8 +31,8 @@ public class CoursesList_Test {
                 .killFilthyPopups();
         coursesPage
                 .chooseFilterCheckboxByTitleAndValue("Направление", "Тестирование")
-                .getCardsList()
-                .getSearchLoader();
+                .getCardsList();
+                //.getSearchLoader();
 
     }
 

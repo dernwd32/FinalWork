@@ -23,9 +23,9 @@ public abstract class AbstractCommon {
         final By cookieCloseBtnXPath = By.xpath("//a[contains(@href, '/legal/cookie')]//following::button[1]");
 
         ArrayList<WebElement> popups = new ArrayList<>();
-        if (standartWaiter.waitForElementLocatedAndVisible(500, bannerCloseBtnClass))
+        if (standartWaiter.waitForElementLocatedAndVisible(1000, bannerCloseBtnClass))
             popups.add(driver.findElement(bannerCloseBtnClass));
-        if (standartWaiter.waitForElementLocatedAndVisible(500, cookieCloseBtnXPath))
+        if (standartWaiter.waitForElementLocatedAndVisible(1000, cookieCloseBtnXPath))
             popups.add(driver.findElement(cookieCloseBtnXPath));
 
         popups.forEach(element -> {

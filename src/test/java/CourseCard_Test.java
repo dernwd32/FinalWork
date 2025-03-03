@@ -31,8 +31,8 @@ public class CourseCard_Test {
 
         coursesPage
                 .chooseFilterCheckboxByTitleAndValue("Направление", "Тестирование")
-                .getCardsList()
-                .getSearchLoader();
+                .getCardsList();
+               // .getSearchLoader();
 
         courseCardPage = new CourseCardPage(driver);
 
