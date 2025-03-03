@@ -18,6 +18,7 @@ import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.net.HttpURLConnection;
 
 
 public class WebDriverFactory implements IWebDriver{
@@ -29,6 +30,23 @@ public class WebDriverFactory implements IWebDriver{
     private String browserVersion = System.getProperty("browser.version", "128.0");
 
 
+    private URL urlChecker(String thisUrl) {
+        if (Objects.isNull(thisUrl)) return null;
+        try {
+            URL testUrl = new URL(thisUrl);
+            HttpURLConnection connection = (HttpURLConnection) testUrl.openConnection();
+            connection.setRequestMethod("HEAD");
+            connection.setConnectTimeout(5000);
+            connection.setReadTimeout(5000);
+            int responseCode = connection.getResponseCode();
+            // Проверяем, что код ответа в диапазоне 200-399 (успешные ответы)
+            if (responseCode >= 200 && responseCode < 400) return testUrl;
+        } catch (Exception e) {
+            throw new RuntimeException("Cannot open selenoid url: " + thisUrl
+                    + " \n" + e);
+        }
+        return null;
+    }
 
     @Override
     public WebDriver create(String webDriverName) {
@@ -38,18 +56,16 @@ public class WebDriverFactory implements IWebDriver{
     @Override
     public WebDriver create(String webDriverName, String mode)  {
 
-        if (!Objects.isNull(remoteUrl)) {
+        URL checkedRemoteUrl = urlChecker(remoteUrl);
+
+        if (!Objects.isNull(checkedRemoteUrl)) {
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability(CapabilityType.BROWSER_NAME, browserName);
             Map<String, Object> options = new HashMap<>();
             options.put(CapabilityType.BROWSER_VERSION, browserVersion);
             options.put("enableVNC", true);
             capabilities.setCapability("selenoid:options", options);
-            try {
-                return new RemoteWebDriver(new URL(remoteUrl), capabilities);
-            } catch (MalformedURLException e) {
-                throw new RuntimeException(e);
-            }
+            return new RemoteWebDriver(checkedRemoteUrl, capabilities);
         }
 
         boolean argsWasSet = (!mode.isEmpty() && mode.charAt(0) == '-');
