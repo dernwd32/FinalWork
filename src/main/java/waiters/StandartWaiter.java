@@ -36,10 +36,6 @@ public class StandartWaiter implements WaiterInt {
     }
   }
 
-  public boolean waitForAlertToBePresent() {
-    return waitForCondition(ExpectedConditions.alertIsPresent(), 250);
-  }
-
   public boolean waitForElementVisible(WebElement element) {
     return waitForCondition(ExpectedConditions.visibilityOf(element));
   }
@@ -50,7 +46,6 @@ public class StandartWaiter implements WaiterInt {
   public boolean waitForElementLocatedAndVisible(long timeout, By... locators) {
     for (By locator : locators) {
       if (!waitForCondition(ExpectedConditions.visibilityOfElementLocated(locator), timeout)) {
-        System.out.println("Не найден локатор: " + locator.toString());
         return false;
       }
     }
@@ -59,10 +54,6 @@ public class StandartWaiter implements WaiterInt {
 
   public boolean waitForElementNotVisible(WebElement element) {
     return waitForCondition(ExpectedConditions.invisibilityOf(element));
-  }
-
-  public boolean waitForTextMatches(By locator, String pattern) {
-    return waitForCondition(ExpectedConditions.textMatches(locator, Pattern.compile(pattern)), 500);
   }
 
   public boolean waitToBeClickable(WebElement element) {

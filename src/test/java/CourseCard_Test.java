@@ -19,7 +19,7 @@ public class CourseCard_Test {
 
     @BeforeEach
     void beforeEach() {
-        String webDriverName = System.getProperty("browser", "firefox");
+        String webDriverName = System.getProperty("browserName", "firefox");
         driver = webDriverFactory.create(webDriverName, "maximize");
         assertWithLog = new AssertWithLog(driver, logger);
 
@@ -30,9 +30,7 @@ public class CourseCard_Test {
                 .killFilthyPopups();
 
         coursesPage
-                .chooseFilterCheckboxByTitleAndValue("Направление", "Тестирование")
-                .getCardsList();
-               // .getSearchLoader();
+                .chooseFilterCheckboxByTitleAndValue("Направление", "Тестирование");
 
         courseCardPage = new CourseCardPage(driver);
 

@@ -40,10 +40,8 @@ public class CoursesRootPage extends AbstractPage{
     public Set<String> hrefsOfCardsInList() {
         Set<String> hrefs = new HashSet<>();
         cardsInList().forEach(
-                card -> {
-                    hrefs.add(card.getAttribute("href"));
-                    System.out.println(card.getAttribute("href"));
-                }
+                card ->
+                    hrefs.add(card.getAttribute("href"))
         );
         return hrefs;
     }

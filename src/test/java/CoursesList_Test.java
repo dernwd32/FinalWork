@@ -21,19 +21,15 @@ public class CoursesList_Test {
 
     @BeforeEach
     void beforeEach() {
-        String webDriverName = System.getProperty("browser", "firefox");
+        String webDriverName = System.getProperty("browserName", "firefox");
         driver = webDriverFactory.create(webDriverName, "maximize");
         assertWithLog = new AssertWithLog(driver, logger);
 
         coursesPage = PageFactory.initElements(driver, CoursesRootPage.class);
         coursesPage
-                .openPage()
-                .killFilthyPopups();
+                .openPage();
         coursesPage
-                .chooseFilterCheckboxByTitleAndValue("Направление", "Тестирование")
-                .getCardsList();
-                //.getSearchLoader();
-
+                .chooseFilterCheckboxByTitleAndValue("Направление", "Тестирование");
     }
 
     @Test
@@ -45,9 +41,6 @@ public class CoursesList_Test {
                 "курсов на странице = " + counter
         );
     }
-
-
-
 
     @AfterEach
     void tearDown() {
