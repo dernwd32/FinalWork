@@ -25,9 +25,6 @@ public class WebDriverFactory implements IWebDriver{
     private WebDriver driver;
 
     //http://193.104.57.173/wd/hub
-    private String remoteUrl = System.getProperty("remote.url");
-    private String browserName = System.getProperty("browser.name", "chrome");
-    private String browserVersion = System.getProperty("browser.version", "128.0");
 
 
     private URL urlChecker(String thisUrl) {
@@ -56,6 +53,11 @@ public class WebDriverFactory implements IWebDriver{
     @Override
     public WebDriver create(String webDriverName, String mode)  {
 
+        // Запуск через удалённый селеноид
+        String remoteUrl = System.getProperty("remote.url");
+        String browserName = System.getProperty("browser.name", "chrome");
+        String browserVersion = System.getProperty("browser.version", "128.0");
+
         URL checkedRemoteUrl = urlChecker(remoteUrl);
 
         if (!Objects.isNull(checkedRemoteUrl)) {
@@ -68,6 +70,7 @@ public class WebDriverFactory implements IWebDriver{
             return new RemoteWebDriver(checkedRemoteUrl, capabilities);
         }
 
+        // Запуск на локальной машине
         boolean argsWasSet = (!mode.isEmpty() && mode.charAt(0) == '-');
 
         switch (webDriverName.toLowerCase().trim()) {
