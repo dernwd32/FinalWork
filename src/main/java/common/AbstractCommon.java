@@ -29,7 +29,7 @@ public abstract class AbstractCommon {
             popups.add(driver.findElement(cookieCloseBtnXPath));
 
         popups.forEach(element -> {
-            if (standartWaiter.waitToBeClickable(element))
+            while (standartWaiter.waitToBeClickable(element))
                 ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
         });
 
