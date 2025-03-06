@@ -31,5 +31,3 @@ echo "~~ Selenoid URL: $REMOTE_URL"
 echo "~~ Chosen browser: $BROWSER_NAME ~ $BROWSER_VERSION"
 mvn clean test -Dremote.url=$REMOTE_URL -Dbrowser.name=$BROWSER_NAME -Dbrowser.version=BROWSER_VERSION
 
-sleep 10
-
